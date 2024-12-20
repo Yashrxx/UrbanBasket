@@ -1,25 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Header from './components/header/Header.js';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      {/* <h1>Hello from UrbanBasket</h1> */}
+      {/* <img src="	https://www.niraagayurveda.com/assets/imgs/theme/logo.svg" alt="404 Error" /> */}
     </div>
   );
 }
-
 export default App;

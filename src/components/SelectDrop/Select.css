@@ -1,0 +1,80 @@
+.selectdrop{
+    .openselect{
+        /* background-color: greenyellow; */
+        margin-top: 3px;
+        display: flex;
+        flex-direction: row;
+        width: 125px;
+        justify-content: space-evenly;
+    }
+}
+.selectDrop {
+    color: grey;
+    height: 350px;
+    width: 230px;
+    border-radius: 5px;
+    /* background-color: burlywood; */
+    position: relative;
+    top: 15px;
+    left: -6px;
+    box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
+    padding: 15px;
+    .Search {
+        display: flex;
+        flex-direction: column;
+        height: 40px;
+        width: 100%;
+        /* border: 2px solid blueviolet; */
+        input {
+            border: 1px solid #3bb77e;
+            border-radius: 5px;
+            height: 100%;
+            width: 100%;
+            outline: none;
+            padding: 10px;
+        }
+        .listItems{
+            /* background-color: violet; */
+            /* border: 2px solid black; */
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            max-height: 280px;
+            overflow-y: auto;
+            li{
+                /* margin-left: -30px; */
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                list-style: none;
+                text-decoration: none;
+                top:0px;
+                height: 40px;
+                padding: 10px;
+                border-radius: 5px;
+                width: 100%;
+                /* border: 1px solid black; */
+            }
+        li:hover{
+            background-color: #d2f1e2;
+        }
+        li.active{
+            background-color: rgba(34, 30, 34, 0.067);
+        }
+    }
+    .listItems::-webkit-scrollbar{
+        /* height: 100px; */
+        width: 10px !important;
+        background: brown !important;
+    }
+    .listItems::-webkit-scrollbar-thumb{
+        background: pink !important; /* Thumb color */
+        border-radius: 10px;
+    }
+    }
+}
