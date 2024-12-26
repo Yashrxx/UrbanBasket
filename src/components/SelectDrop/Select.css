@@ -70,11 +70,11 @@
     .listItems::-webkit-scrollbar{
         /* height: 100px; */
         width: 10px !important;
-        background: brown !important;
+        background: rgb(240, 240, 240) !important;
     }
     .listItems::-webkit-scrollbar-thumb{
-        background: pink !important; /* Thumb color */
-        border-radius: 10px;
+        background: grey !important; /* Thumb color */
+        border-radius: 5px;
     }
     }
 }

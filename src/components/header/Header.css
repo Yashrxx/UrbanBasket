@@ -1,5 +1,7 @@
 header{
     /* background-color: bisque; */
+    margin-top: 25px;
+    height: 100px;
     .row{
         display: flex;
         flex-direction: row;

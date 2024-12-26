@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/header/Header.js';
+import './assets/css/Style.css'
 function App() {
   return (
     <div className="App">

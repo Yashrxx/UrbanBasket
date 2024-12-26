@@ -5,6 +5,7 @@ import Logo_3 from '../../assets/img/icon-heart.svg';
 import Logo_4 from '../../assets/img/icon-cart.svg';
 import Logo_5 from '../../assets/img/icon-user.svg';
 import '../header/Header.css';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Select from '../SelectDrop/Select';
 import SearchIcon from '@mui/icons-material/Search';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -15,7 +16,9 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import TuneIcon from '@mui/icons-material/Tune';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import axios from 'axios';
+import Navbar from './Navbar';
 export default function Header() {
+  const [isOpenDropdown,setisOpenDropdown]=useState(false);
   const [categories]=useState([
     'Milk and Diaries',
     'Clothing and Beauty',
@@ -64,22 +67,28 @@ export default function Header() {
               </div>
             </div>
             <div className="countryList"><LocationOnIcon className='locationIcon'/><Select data={countryList} placeholder={'Your Location'}/></div>
+            <ClickAwayListener onClickAway={() => { setisOpenDropdown(false) }}>
             <div className="hb-3">
               <div className="lg-2"><img src={Logo_2} alt="Error 404" /><span className='badge bg-success rounded-cirlce'>3</span><h5>Compare</h5></div>
               <div className="lg-3"><img src={Logo_3} alt="Error 404" /><span className='badge bg-success rounded-cirlce'>3</span><h5>Wishlist</h5></div>
               <div className="lg-4"><img src={Logo_4} alt="Error 404" /><span className='badge bg-success rounded-cirlce'>3</span><h5>Cart</h5></div>
-              <div className="lg-5"><img src={Logo_5} alt="Error 404" /><span className='badge bg-success rounded-cirlce'>3</span><h5>Account</h5>
+              <div className="lg-5" onClick={()=>setisOpenDropdown(!isOpenDropdown)}><img src={Logo_5} alt="Error 404" /><span className='badge bg-success rounded-cirlce'>3</span><h5>Account</h5>
+              {
+                isOpenDropdown!==false && 
               <ul className="dropDownMenu">
               <li><Button><PersonIcon/> My Account</Button></li>
               <li><Button><PinDropIcon/> Order Tracking</Button></li>
               <li><Button><FavoriteBorderIcon/> My Wishlist</Button></li>
               <li><Button><TuneIcon/> Setting</Button></li>
               <li><Button><ExitToAppIcon/> Sign out</Button></li>
-            </ul>
+              </ul>
+              }
               </div>
             </div>
+            </ClickAwayListener>
           </div>
       </header>
+      <Navbar/>
     </>
   )
 }
