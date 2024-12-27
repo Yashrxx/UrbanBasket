@@ -6,6 +6,9 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     font-family: "Quicksand", serif;
+    li{
+        cursor: pointer;
+    }
     .catTab{
         padding: 10px 20px !important;
         background-color: #29A56C;
@@ -126,10 +129,25 @@
             font-size: 15px;
         }
     }
+    .pageList{
+        position: absolute;
+        background-color: white;
+        box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
+        border-radius: 10px;
+        top: 210px;
+        left: 1065px;
+        width: 250px;
+    }
+    li{
+        margin-top: 4px;
+        padding: 5px;
+        /* padding-left: 0px; */
+        font-size: 15px;
+    }
     .crax{
         position: absolute;
         background-color: white;
-        color: red !important;
+        /* color: white !important; */
         box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
         border-radius: 10px;
         top: 210px;
@@ -138,17 +156,91 @@
         width: 100%;
         display: flex;
         flex-direction: row;
+        h4{
+            /* margin-left: 35px; */
+            color: #29A56C;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-weight: 650;
+            font-size: 20px;
+            font-family: "Quicksand", serif;
+        }
+        h4:hover{
+            color: goldenrod;
+        }
         .box-1{
             width:25%;
-            background-color: yellowgreen;
         }
         .box-2{
             width:25%;
-            background-color: goldenrod;
         }
         .box-3{
-            width:25%;
-            background-color: orange;
+            width:20%;
+        }
+        .box-4{
+            width: 425px; /* Set width */
+            height: 300px;
+            border-radius: 15px;
+            margin-top: 20px;
+            background-image: url('../../assets/img/banner-menu.png');
+            background-size: cover; /* Adjust the size (e.g., cover, contain, auto) */
+            background-repeat: no-repeat; /* Prevent tiling */
+            background-position: center; 
+            h5{
+                margin-left: 30px;
+                margin-top: 20px;
+                color: rgb(41, 41, 41);
+                font-weight: 400;
+            }
+            h3{
+                margin-left: 30px;
+                color: rgb(37, 61, 78);
+                font-weight: 800;
+            }
+            p{
+                margin-left: 30px;
+                font-size: 25px;
+                font-weight: 900;
+                color: rgb(129, 177, 61);
+            }
+            .btn-xy{
+                border-radius: 20px;
+                margin-left: 35px;
+                background-color: #29cd80;
+                height: 38px;
+                width: 110px;
+                color: white;
+                font-weight: 700;
+                border: none;
+            }
+            .offer{
+                border-radius: 75px;
+                background-color: rgb(255,213,90);
+                height: 80px;
+                width: 80px;
+                position: absolute;
+                top: 60px;
+                right: 70px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .percent{
+                    font-size: 25px;
+                    font-weight: 700;
+                    margin-top: 10px;
+                }
+                .off{
+                    font-size: 20px;
+                    font-weight: 550;
+                    margin-top: -7px;
+                }
+            }
+        }
+        .box-4:hover{
+            .btn-xy{
+            background-color: rgb(253,110,110);
+            }
         }
         }
 }
