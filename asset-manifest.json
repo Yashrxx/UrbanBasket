@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/UrbanBasket/static/css/main.ca41448e.css",
-    "main.js": "/UrbanBasket/static/js/main.c5399141.js",
+    "main.css": "/UrbanBasket/static/css/main.e6271d7c.css",
+    "main.js": "/UrbanBasket/static/js/main.00816256.js",
     "static/js/453.61795ef8.chunk.js": "/UrbanBasket/static/js/453.61795ef8.chunk.js",
+    "static/media/slider-1.png": "/UrbanBasket/static/media/slider-1.89d4c10e6549245f337a.png",
+    "static/media/slider-2.png": "/UrbanBasket/static/media/slider-2.01fdcc91eff86c9fabdc.png",
     "static/media/banner-menu.png": "/UrbanBasket/static/media/banner-menu.cd12bcd2c5449cda842c.png",
     "static/media/icon-user.svg": "/UrbanBasket/static/media/icon-user.2e4f54901f4259cfce38f81e377c7d81.svg",
     "index.html": "/UrbanBasket/index.html",
     "static/media/icon-cart.svg": "/UrbanBasket/static/media/icon-cart.25147ccd9e9784444ba33f1340ba2bc0.svg",
     "static/media/icon-heart.svg": "/UrbanBasket/static/media/icon-heart.4ca4146bca37f3ee67a2397fe2a352b2.svg",
     "static/media/icon-compare.svg": "/UrbanBasket/static/media/icon-compare.eeb11d02f2296fb1d5043f0646afd5f2.svg",
-    "main.ca41448e.css.map": "/UrbanBasket/static/css/main.ca41448e.css.map",
-    "main.c5399141.js.map": "/UrbanBasket/static/js/main.c5399141.js.map",
+    "main.e6271d7c.css.map": "/UrbanBasket/static/css/main.e6271d7c.css.map",
+    "main.00816256.js.map": "/UrbanBasket/static/js/main.00816256.js.map",
     "453.61795ef8.chunk.js.map": "/UrbanBasket/static/js/453.61795ef8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca41448e.css",
-    "static/js/main.c5399141.js"
+    "static/css/main.e6271d7c.css",
+    "static/js/main.00816256.js"
   ]
 }
