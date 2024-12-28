@@ -17,6 +17,7 @@ import TuneIcon from '@mui/icons-material/Tune';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import axios from 'axios';
 import Navbar from './Navbar';
+import Home from '../../Pages/Home/Home';
 export default function Header() {
   const [isOpenDropdown,setisOpenDropdown]=useState(false);
   const [categories]=useState([
@@ -89,6 +90,7 @@ export default function Header() {
           </div>
       </header>
       <Navbar/>
+      <Home/>
     </>
   )
 }

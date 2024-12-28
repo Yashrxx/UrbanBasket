@@ -61,7 +61,7 @@ export default function Navbar() {
                   <li className="home" onClick={() => handleDropdownToggle('drop1')} onMouseEnter={() => { clearTimeout(timer.current); setdrop1(true); handleDropdownToggle('drop1') }} onMouseLeave={handleMouseLeave}>Home<KeyboardArrowDownIcon /></li>
                   {
                     drop1 !== false &&
-                    <ul className="drop" onMouseEnter={() => { clearTimeout(timer.current); setdrop1(true); handleDropdownToggle('drop3') }}
+                    <ul className="drop" onMouseEnter={() => { clearTimeout(timer.current); setdrop1(true); handleDropdownToggle('drop1') }}
                       onMouseLeave={handleMouseLeave}>
                       <li>Home 1</li>
                       <li>Home 2</li>

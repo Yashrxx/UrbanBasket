@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../SelectDrop/Select.css'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
+import { useRef } from 'react';
 export default function Select({data,placeholder}) {
     const [openselect, setopenselect] = useState(false);
     const [selectedIndex, setselectedIndex] = useState(0);
@@ -14,6 +15,16 @@ export default function Select({data,placeholder}) {
         setselectedIndex(index);
         setselectedItem(name);
     }
+    const timer = useRef(null);
+    const handleMouseLeave = (e) => {
+        if (!e.relatedTarget && e.currentTarget.contains(e.relatedTarget)) {
+          // If the mouse is moving to the dropdown or button, don't start the timer
+          return;
+        }
+        timer.current = setTimeout(() => {
+            setopenselect(false)
+        }, 100); // 1-second delay before closing
+      };
     const [listData,setlistData]=useState(data);
     const [listData2]=useState(data);
     const filterList=(e)=>{
@@ -30,7 +41,7 @@ export default function Select({data,placeholder}) {
     return (
         <ClickAwayListener onClickAway={() => { setopenselect(false) }}>
             <div className="selectdrop">
-                <span className='openselect' onClick={openSelect}>{selectedItem.length>14 ? selectedItem.substr(0,14)+'..':selectedItem}<div className='dropIcon'><KeyboardArrowDownIcon /></div></span>
+                <span className='openselect' onClick={openSelect} onMouseEnter={openSelect} onMouseLeave={handleMouseLeave}>{selectedItem.length>14 ? selectedItem.substr(0,14)+'..':selectedItem}<div className='dropIcon'><KeyboardArrowDownIcon /></div></span>
                 {
                     openselect === true &&
                     <div className='selectDrop'>
