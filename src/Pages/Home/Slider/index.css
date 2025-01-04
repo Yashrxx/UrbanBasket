@@ -5,6 +5,53 @@
     margin-top: 30px;
     align-items: center;
     width: 100%;
+    .slider-button {
+        position: absolute;
+        top: 70%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: black;
+        cursor: pointer;
+        z-index: 2;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transform: scale(1.1);
+        /* visibility: hidden; */
+      }
+      .slider-button {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
+      }
+      
+      .slider-button.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .slider-button.hidden {
+        opacity: 0;
+      }      
+      .slider-button.prev {
+        left: 30px;
+        background-color: white;
+        opacity: 0.7;
+      }
+      
+      .slider-button.next {
+        right: 30px;
+        background-color: white;
+        opacity: 0.7;
+      }
+      
+      .slider-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      
     .Slider_1{
             background-image: url('../../../assets//img/slider-1.png'); /* Replace with actual image path */
             background-size: cover; /* Adjust image size */
@@ -15,7 +62,7 @@
             /* border: 3px solid black; */
             background-size: 100% 100%;
             width: 100%;
-            height: 500px; /* Adjust height based on your design */
+            height: 525px; /* Adjust height based on your design */
     }
     .Slider_2{
         background-image: url('../../../assets//img/slider-2.png'); /* Replace with actual image path */
@@ -27,7 +74,7 @@
         /* border: 3px solid black; */
         background-size: 100% 100%;
         width: 100%;
-        height: 500px; /* Adjust height based on your design */
+        height: 550px; /* Adjust height based on your design */
         /* background-color: red; */
 }
 .heading-1{
@@ -91,11 +138,9 @@ form{
         font-family: "Quicksand", serif;
     }
 }
-}
-/* Ensure custom styles override defaults */
 .slick-dots {
     position: absolute;
-    bottom: 20px;
+    bottom: 60px;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -133,4 +178,47 @@ section.homeSlider .slick-dots li button {
 
 section.homeSlider .slick-dots li.slick-active button {
     background-color: #29A56C !important;
+}
+/* Ensure custom styles override defaults */
+.slick-dots {
+    position: absolute;
+    bottom: 60px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    z-index: 2; /* Ensure it's visible over other elements */
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots li button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc; /* Default dot color */
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #007bff; /* Active dot color */
+}
+
+/* Optionally hide dots (to debug overlapping) */
+.slick-dots li button::before {
+    display: none; /* Remove the default "before" pseudo-element */
+}
+
+section.homeSlider .slick-dots li button {
+    background-color: #ccc !important;
+}
+
+section.homeSlider .slick-dots li.slick-active button {
+    background-color: #29A56C !important;
+}
 }

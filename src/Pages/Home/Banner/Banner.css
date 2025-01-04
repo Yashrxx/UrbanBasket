@@ -1,0 +1,50 @@
+.Banner{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 250px;
+    img{
+        height: 275px;
+        width: 500px;
+        border-radius: 20px;
+        z-index: -1;
+        position: absolute;
+    }
+    .classic{
+        height: 100%;
+        p{
+            font-family: "Quicksand", serif;
+            font-size: 25px;
+            color: rgb(37,61,78) !important;
+            font-weight: 700;
+            width: 55%;
+            transform: translate(40px,40px);
+        }
+    }
+    .hrx{
+        position: relative !important;
+        bottom: 0px !important;
+        transform: translate(40px,20px) !important;
+        background-color: rgb(59,183,126);
+        border-style: none;
+        border-radius: 5px;
+        font-size: 12px;
+        height: 30px;
+        width: 100px;
+        color: white;
+        font-weight: 700;
+        font-family: "Quicksand", serif;
+    }
+    .banner-1{
+        width: 32%;
+    }
+    .banner-2{
+        width: 32%;
+    }
+    .banner-3{
+        width: 32%;
+    }
+}

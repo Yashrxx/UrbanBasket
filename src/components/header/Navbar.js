@@ -44,7 +44,7 @@ export default function Navbar() {
       setdrop4(false);
       setdrop5(false);
       setdrop6(false);
-    }, 500); // 1-second delay before closing
+    }, 100); // 1-second delay before closing
   };
   return (
     <div className='Nav d-flex align-items-center flex-row'>

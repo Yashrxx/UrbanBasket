@@ -1,11 +1,19 @@
 import React from 'react'
 import Slider from 'react-slick'
 import './index.css'
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import planeIcon from '../../../assets/img/icon-plane.png'
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 export default function HomeSlider() {
-
     const sliderRef = useRef(null);
+    const [showButtons, setShowButtons] = useState(false);
+    const handleMouseEnter = () => {
+        setShowButtons(true);
+    };
+    const handleMouseLeave = () => {
+        setShowButtons(false);
+    };
     var settings = {
         dots: true,
         infinite: true,
@@ -20,7 +28,6 @@ export default function HomeSlider() {
                 sliderRef.current.slickNext(); // Move to the next slide
             }
         }, 50000); // Change slide every 3 seconds (3000ms)
-
         // Clean up the interval when the component unmounts or when dependencies change
         return () => clearInterval(interval);
     }, []);
@@ -37,9 +44,7 @@ export default function HomeSlider() {
                 }
             }
         };
-
         window.addEventListener('keydown', handleKeyDown);
-
         // Clean up the event listener when the component unmounts
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
@@ -48,8 +53,18 @@ export default function HomeSlider() {
     return (
         <section className='homeSlider'>
             <div className="container-fluid">
-                <div className="slider-img">
-                    <Slider {...settings} ref={sliderRef}>
+                <div className="slider-img" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    {showButtons && (
+                        <>
+                            <button className="slider-button prev" onClick={() => sliderRef.current.slickPrev()}>
+                                <KeyboardArrowLeftIcon />
+                            </button>
+                            <button className="slider-button next" onClick={() => sliderRef.current.slickNext()}>
+                                <KeyboardArrowRightIcon />
+                            </button>
+                        </>
+                    )}
+                    <Slider {...settings} ref={sliderRef} className='Slider_main'>
                         <div className='Slider_1'>
                             <div className='heading-1'>Don't miss amazing grocery deals</div>
                             <div className='heading-2'>Sign up for the daily newsletter</div>
