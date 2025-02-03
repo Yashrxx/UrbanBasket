@@ -12,8 +12,10 @@ const InventoryList = () => {
         <Card
           key={item.id}
           image={item.image}
+          category={item.category}
           description={item.description}
           price={item.price}
+          brand={item.brand}
         />
       ))}
     </div>

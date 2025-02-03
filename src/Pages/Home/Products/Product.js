@@ -5,9 +5,20 @@ import InventoryList from '../Card/InventoryList';
 const Product = () => {
   return (
     <div  className='inventory_products'>
-    <InventoryProvider className='inventory_products'>
+    <InventoryProvider>
       <div style={styles.app}>
-        <h1>Inventory</h1>
+        <div className="inventory_nav">
+          <h1>Popular Products</h1>
+          <div className="catList">
+            <li>All</li>
+            <li>Milk and Diaries</li>
+            <li>Cofees and Teas</li>
+            <li>Pet Foods</li>
+            <li>Meats</li>
+            <li>Vegetables</li>
+            <li>Fruits</li>
+          </div>
+        </div>
         <InventoryList />
       </div>
     </InventoryProvider>
@@ -23,4 +34,3 @@ const styles = {
 };
 
 export default Product;
-
