@@ -11,6 +11,8 @@ const InventoryList = () => {
       {inventory.map((item) => (
         <Card
           key={item.id}
+          tag={item.tag}
+          tag_desc={item.tag_desc}
           image={item.image}
           category={item.category}
           description={item.description}

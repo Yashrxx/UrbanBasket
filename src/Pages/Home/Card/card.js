@@ -7,16 +7,27 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import ShuffleIcon from '@mui/icons-material/Shuffle';
-const Card = ({ image, description, price, category, brand }) => {
+const Card = ({ image, description, price, category, brand , tag , tag_desc}) => {
   const timer = useRef(null);
   const [cloud1, setcloud1] = useState(false);
   const [cloud2, setcloud2] = useState(false);
   const [cloud3, setcloud3] = useState(false);
-  const handleTogglecloud=(cloud)=>{
+  // eslint-disable-next-line
+  const [t1, sett1] = useState(false);
+  // eslint-disable-next-line
+  const [t2, sett2] = useState(false);
+  // eslint-disable-next-line
+  const [t3, sett3] = useState(false);
+  const handleTogglecloud=(cloud,triangle)=>{
     setcloud1(false);
-    if(cloud==='cloud1') setcloud1(true);
-    if(cloud==='cloud2') setcloud2(true);
-    if(cloud==='cloud3') setcloud3(true);
+    setcloud2(false);
+    setcloud3(false);
+    sett1(false);
+    sett2(false);
+    sett3(false);
+    if((cloud,triangle)===('cloud1','t1')) setcloud1(true);sett1(true);
+    if((cloud,triangle)===('cloud2','t2')) setcloud2(true);sett2(true);
+    if((cloud,triangle)===('cloud3','t3')) setcloud3(true);sett3(true);
   }
   const handleMouseLeave=(e)=>{
     if(e.relatedTarget && !e.currentTarget.contains(e.relatedTarget)){
@@ -24,7 +35,10 @@ const Card = ({ image, description, price, category, brand }) => {
         setcloud1(false)
         setcloud2(false)
         setcloud3(false)
-      },1000)
+        sett1(false)
+        sett2(false)
+        sett3(false)
+      },0)
     }
   }
   //   document.querySelectorAll('.rating').forEach(rating => {
@@ -68,6 +82,7 @@ const Card = ({ image, description, price, category, brand }) => {
   // }
   return (
     <div className="container-fluid-x">
+      <span className={`badge ${tag}`}>{tag_desc}</span>
       <div className='styler' style={styles.card} onMouseEnter={()=>setcloud1(false)}>
         <div className="imgx1">
           <img src={image} alt="Product" style={styles.image} />
@@ -75,34 +90,34 @@ const Card = ({ image, description, price, category, brand }) => {
             <ul className='list list-inline mb-0'>
               <li className='list list-inline-item'>
                 <a className='cur' href='/'>
-                  <FavoriteBorderOutlinedIcon className='Wish' onMouseEnter={() => { clearTimeout(timer.current); setcloud1(true); handleTogglecloud('cloud1') }} onMouseLeave={handleMouseLeave} />
+                  <FavoriteBorderOutlinedIcon className='Wish' onMouseEnter={() => { clearTimeout(timer.current); setcloud1(true); handleTogglecloud('cloud1','t1') }} onMouseLeave={handleMouseLeave} />
                     {
                       cloud1 !== false &&
                       <>
                       <div className='Atw'><h6>Add to Wishlist</h6></div>
-                      <div className='t-1'></div>
+                      <div className='t-1' onMouseEnter={() => { clearTimeout(timer.current); sett1(true) }} onMouseLeave={handleMouseLeave}></div>
                       </>
                     }
                 </a>
               </li>
               <li className='list list-inline-item'>
-                <a className='cur' href='/'><ShuffleIcon className='Comp' onMouseEnter={() => { clearTimeout(timer.current); setcloud1(true); handleTogglecloud('cloud2') }} onMouseLeave={handleMouseLeave}/>
+                <a className='cur' href='/'><ShuffleIcon className='Comp' onMouseEnter={() => { clearTimeout(timer.current); setcloud2(true); handleTogglecloud('cloud2','t2') }} onMouseLeave={handleMouseLeave}/>
                 {
                       cloud2 !== false &&
                       <>
                       <div className='Cmp' onMouseEnter={() => { clearTimeout(timer.current); setcloud2(true) }} onMouseLeave={handleMouseLeave}><h6>Compare</h6></div>
-                      <div className='t-2'></div>
+                      <div className='t-2' onMouseEnter={() => { clearTimeout(timer.current); sett2(true) }} onMouseLeave={handleMouseLeave}></div>
                       </>
                     }
                 </a>
               </li>
               <li className='list list-inline-item'>
-                <a className='cur' href='/'><VisibilityOutlinedIcon className='quickView' onMouseEnter={() => { clearTimeout(timer.current); setcloud1(true); handleTogglecloud('cloud3') }} onMouseLeave={handleMouseLeave}/>
+                <a className='cur' href='/'><VisibilityOutlinedIcon className='quickView' onMouseEnter={() => { clearTimeout(timer.current); setcloud3(true); handleTogglecloud('cloud3','t3') }} onMouseLeave={handleMouseLeave}/>
                 {
                       cloud3 !== false &&
                       <>
                       <div className='Qv' onMouseEnter={() => { clearTimeout(timer.current); setcloud3(true) }} onMouseLeave={handleMouseLeave}><h6>Quick View</h6></div>
-                      <div className="t-3"></div>
+                      <div className="t-3" onMouseEnter={() => { clearTimeout(timer.current); sett3(true) }} onMouseLeave={handleMouseLeave}></div>
                       </>
                     }
                 </a>

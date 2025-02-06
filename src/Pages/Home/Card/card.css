@@ -6,7 +6,13 @@
   flex-direction: row;
   position: relative;
   justify-content: flex-start !important;
-
+  .badge{
+    position: absolute;top: 10px !important;left: 10px !important;display: inline-block;background: transparent;z-index: 2;color: #ffff;padding: 10px 20px;font-size: 15px;border-bottom-right-radius: 20px;border-top-left-radius: 9px;border-bottom-left-radius: 0px;
+  }
+  .badge.hot{background-color: #f74b81 !important;}
+  .badge.sale{background-color: #67bcee !important;}
+  .badge.new{background-color: #3bb77e !important;}
+  .badge.best{background-color: #f59758 !important;}
   /* background-color: aqua; */
   .styler {
     display: flex;
@@ -20,6 +26,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: -1;
   }
 
   .overlay {
@@ -96,7 +103,6 @@
 
 .styler:hover {
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-
   .overlay {
     display: block;
 
@@ -274,15 +280,13 @@
       }
     }
   }
-
   .imgx1 {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    img {
-      transform: scale(1.1);
+    img{
+      transform: scale(1.05);
       transition: transform 0.3s ease-in-out;
     }
   }
