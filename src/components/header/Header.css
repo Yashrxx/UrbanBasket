@@ -1,8 +1,11 @@
+.headerWrapper{
+    position: sticky !important;top:0px;left:0px;width: 100%;z-index: 99;background-color: white;
+}
 header{
-    /* background-color: bisque; */
-    margin-top: 25px;
+    margin-top: 0px;
     height: 100px;
     .row{
+        margin-top: 20px;
         display: flex;
         flex-direction: row;
         /* background-color: rgb(224, 156, 156); */
@@ -60,7 +63,7 @@ header{
                     input{
                         border: 0px;
                         outline: none !important;
-                        /* background-color: rgb(180, 255, 127); */
+                        background-color: transparent;
                         font-size: 18px;
                         height: 100%;
                         width: 90%;

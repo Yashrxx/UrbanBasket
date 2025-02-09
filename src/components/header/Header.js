@@ -89,7 +89,9 @@ export default function Header() {
             </ClickAwayListener>
           </div>
       </header>
+      <div className="headerWrapper">
       <Navbar/>
+      </div>
       <Home/>
     </>
   )

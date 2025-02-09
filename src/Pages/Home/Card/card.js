@@ -25,9 +25,9 @@ const Card = ({ image, description, price, category, brand , tag , tag_desc}) =>
     sett1(false);
     sett2(false);
     sett3(false);
-    if((cloud,triangle)===('cloud1','t1')) setcloud1(true);sett1(true);
-    if((cloud,triangle)===('cloud2','t2')) setcloud2(true);sett2(true);
-    if((cloud,triangle)===('cloud3','t3')) setcloud3(true);sett3(true);
+    if((cloud==='cloud1' && triangle==='t1')) setcloud1(true);sett1(true);
+    if((cloud==='cloud2' && triangle==='t2')) setcloud2(true);sett2(true);
+    if((cloud==='cloud3' && triangle==='t3')) setcloud3(true);sett3(true);
   }
   const handleMouseLeave=(e)=>{
     if(e.relatedTarget && !e.currentTarget.contains(e.relatedTarget)){
@@ -41,7 +41,80 @@ const Card = ({ image, description, price, category, brand , tag , tag_desc}) =>
       },0)
     }
   }
-  //   document.querySelectorAll('.rating').forEach(rating => {
+  return (
+    <div className="container-fluid-x">
+      <span className={`badge ${tag}`}>{tag_desc}</span>
+      <div className='styler' style={styles.card}>
+        <div className="imgx1">
+          <img src={image} alt="Product" style={styles.image}/>
+          </div>
+          <div className="overlay">
+            <ul className='list list-inline mb-0'>
+              <li className='list list-inline-item'>
+                <a className='cur' href='/'>
+                  <FavoriteBorderOutlinedIcon className='Wish' onMouseEnter={() => { clearTimeout(timer.current); setcloud1(true); handleTogglecloud('cloud1','t1');}} onMouseLeave={handleMouseLeave} />
+                    {
+                      cloud1 !== false &&
+                      <>
+                      <div className='Atw'><h6>Add to Wishlist</h6></div>
+                      <div className='t-1' onMouseEnter={() => { clearTimeout(timer.current); sett1(true);}} onMouseLeave={handleMouseLeave}></div>
+                      </>
+                    }
+                </a>
+              </li>
+              <li className='list list-inline-item'>
+                <a className='cur' href='/'><ShuffleIcon className='Comp' onMouseEnter={() => { clearTimeout(timer.current); setcloud2(true); handleTogglecloud('cloud2','t2') }} onMouseLeave={handleMouseLeave}/>
+                {
+                      cloud2 !== false &&
+                      <>
+                      <div className='Cmp' onMouseEnter={() => { clearTimeout(timer.current); setcloud2(true) }} onMouseLeave={handleMouseLeave}><h6>Compare</h6></div>
+                      <div className='t-2' onMouseEnter={() => { clearTimeout(timer.current); sett2(true) }} onMouseLeave={handleMouseLeave}></div>
+                      </>
+                    }
+                </a>
+              </li>
+              <li className='list list-inline-item'>
+                <a className='cur' href='/'><VisibilityOutlinedIcon className='quickView' onMouseEnter={() => { clearTimeout(timer.current); setcloud3(true); handleTogglecloud('cloud3','t3') }} onMouseLeave={handleMouseLeave}/>
+                {
+                      cloud3 !== false &&
+                      <>
+                      <div className='Qv' onMouseEnter={() => { clearTimeout(timer.current); setcloud3(true) }} onMouseLeave={handleMouseLeave}><h6>Quick View</h6></div>
+                      <div className="t-3" onMouseEnter={() => { clearTimeout(timer.current); sett3(true) }} onMouseLeave={handleMouseLeave}></div>
+                      </>
+                    }
+                </a>
+              </li>
+            </ul>
+        </div>
+        <div className='catg'>{category}</div>
+        <div className='title'>{description}</div>
+        <Rating className='rating' name="half-rating-read" value={2.5} defaultValue={2.5} precision={0.5} readOnly />
+        <div className='brand d-block'>By <div className="brd">{brand}</div></div>
+        <div className='pricex1'><strong>{price}</strong> <Button className='shopcartButton'><ShoppingCartOutlinedIcon style={{ transform: 'scale(0.8)' }}></ShoppingCartOutlinedIcon>Add</Button></div>
+      </div>
+    </div>
+  );
+};
+
+const styles = {
+  card: {
+    border: '1px solid #ccc',
+    borderRadius: '8px',
+    padding: '16px',
+    textAlign: 'center',
+    width: '90%',
+    margin: '10px',
+    height: '450px',
+  },
+  image: {
+    width: '200px',
+    height: '220px',
+    objectFit: 'cover',
+  },
+};
+
+export default Card;
+//   document.querySelectorAll('.rating').forEach(rating => {
   //     const stars = rating.querySelectorAll('.star');
 
   //   stars.forEach(star => {
@@ -80,76 +153,3 @@ const Card = ({ image, description, price, category, brand , tag , tag_desc}) =>
   //     if (index < selectedRating) star.classList.add('selected');
   //   });
   // }
-  return (
-    <div className="container-fluid-x">
-      <span className={`badge ${tag}`}>{tag_desc}</span>
-      <div className='styler' style={styles.card} onMouseEnter={()=>setcloud1(false)}>
-        <div className="imgx1">
-          <img src={image} alt="Product" style={styles.image} />
-          <div className="overlay">
-            <ul className='list list-inline mb-0'>
-              <li className='list list-inline-item'>
-                <a className='cur' href='/'>
-                  <FavoriteBorderOutlinedIcon className='Wish' onMouseEnter={() => { clearTimeout(timer.current); setcloud1(true); handleTogglecloud('cloud1','t1') }} onMouseLeave={handleMouseLeave} />
-                    {
-                      cloud1 !== false &&
-                      <>
-                      <div className='Atw'><h6>Add to Wishlist</h6></div>
-                      <div className='t-1' onMouseEnter={() => { clearTimeout(timer.current); sett1(true) }} onMouseLeave={handleMouseLeave}></div>
-                      </>
-                    }
-                </a>
-              </li>
-              <li className='list list-inline-item'>
-                <a className='cur' href='/'><ShuffleIcon className='Comp' onMouseEnter={() => { clearTimeout(timer.current); setcloud2(true); handleTogglecloud('cloud2','t2') }} onMouseLeave={handleMouseLeave}/>
-                {
-                      cloud2 !== false &&
-                      <>
-                      <div className='Cmp' onMouseEnter={() => { clearTimeout(timer.current); setcloud2(true) }} onMouseLeave={handleMouseLeave}><h6>Compare</h6></div>
-                      <div className='t-2' onMouseEnter={() => { clearTimeout(timer.current); sett2(true) }} onMouseLeave={handleMouseLeave}></div>
-                      </>
-                    }
-                </a>
-              </li>
-              <li className='list list-inline-item'>
-                <a className='cur' href='/'><VisibilityOutlinedIcon className='quickView' onMouseEnter={() => { clearTimeout(timer.current); setcloud3(true); handleTogglecloud('cloud3','t3') }} onMouseLeave={handleMouseLeave}/>
-                {
-                      cloud3 !== false &&
-                      <>
-                      <div className='Qv' onMouseEnter={() => { clearTimeout(timer.current); setcloud3(true) }} onMouseLeave={handleMouseLeave}><h6>Quick View</h6></div>
-                      <div className="t-3" onMouseEnter={() => { clearTimeout(timer.current); sett3(true) }} onMouseLeave={handleMouseLeave}></div>
-                      </>
-                    }
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className='catg'>{category}</div>
-        <div className='title'>{description}</div>
-        <Rating className='rating' name="half-rating-read" value={2.5} defaultValue={2.5} precision={0.5} readOnly />
-        <div className='brand d-block'>By <div className="brd">{brand}</div></div>
-        <div className='pricex1'><strong>{price}</strong> <Button className='shopcartButton'><ShoppingCartOutlinedIcon style={{ transform: 'scale(0.8)' }}></ShoppingCartOutlinedIcon>Add</Button></div>
-      </div>
-    </div>
-  );
-};
-
-const styles = {
-  card: {
-    border: '1px solid #ccc',
-    borderRadius: '8px',
-    padding: '16px',
-    textAlign: 'center',
-    width: '90%',
-    margin: '10px',
-    height: '450px',
-  },
-  image: {
-    width: '200px',
-    height: '220px',
-    objectFit: 'cover',
-  },
-};
-
-export default Card;
