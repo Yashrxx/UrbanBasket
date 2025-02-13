@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/UrbanBasket/static/css/main.678ed6bf.css",
-    "main.js": "/UrbanBasket/static/js/main.5aee4ca3.js",
+    "main.css": "/UrbanBasket/static/css/main.d46b81a0.css",
+    "main.js": "/UrbanBasket/static/js/main.f131ae67.js",
     "static/js/453.2cd00c16.chunk.js": "/UrbanBasket/static/js/453.2cd00c16.chunk.js",
     "static/media/slider-1.png": "/UrbanBasket/static/media/slider-1.89d4c10e6549245f337a.png",
+    "static/media/banner-4.png": "/UrbanBasket/static/media/banner-4.9af274418cd53637a3dc.png",
     "static/media/slider-2.png": "/UrbanBasket/static/media/slider-2.01fdcc91eff86c9fabdc.png",
     "static/media/product-10-1.jpg": "/UrbanBasket/static/media/product-10-1.f6b6eab6183f640862ac.jpg",
     "static/media/product-5-1.jpg": "/UrbanBasket/static/media/product-5-1.88c0dc57c1fbdb28029e.jpg",
@@ -30,17 +31,21 @@
     "static/media/cat-9.png": "/UrbanBasket/static/media/cat-9.b47d8bf4d6f4e0bca756.png",
     "static/media/cat-15.png": "/UrbanBasket/static/media/cat-15.ca75690e37dc381e9f0c.png",
     "static/media/cat-5.png": "/UrbanBasket/static/media/cat-5.aad30d7464c1b497bb8d.png",
+    "static/media/slick.svg": "/UrbanBasket/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/UrbanBasket/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/UrbanBasket/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/icon-user.svg": "/UrbanBasket/static/media/icon-user.2e4f54901f4259cfce38f81e377c7d81.svg",
     "index.html": "/UrbanBasket/index.html",
     "static/media/icon-cart.svg": "/UrbanBasket/static/media/icon-cart.25147ccd9e9784444ba33f1340ba2bc0.svg",
+    "static/media/slick.woff": "/UrbanBasket/static/media/slick.295183786cd8a1389865.woff",
     "static/media/icon-heart.svg": "/UrbanBasket/static/media/icon-heart.4ca4146bca37f3ee67a2397fe2a352b2.svg",
     "static/media/icon-compare.svg": "/UrbanBasket/static/media/icon-compare.eeb11d02f2296fb1d5043f0646afd5f2.svg",
-    "main.678ed6bf.css.map": "/UrbanBasket/static/css/main.678ed6bf.css.map",
-    "main.5aee4ca3.js.map": "/UrbanBasket/static/js/main.5aee4ca3.js.map",
+    "main.d46b81a0.css.map": "/UrbanBasket/static/css/main.d46b81a0.css.map",
+    "main.f131ae67.js.map": "/UrbanBasket/static/js/main.f131ae67.js.map",
     "453.2cd00c16.chunk.js.map": "/UrbanBasket/static/js/453.2cd00c16.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.678ed6bf.css",
-    "static/js/main.5aee4ca3.js"
+    "static/css/main.d46b81a0.css",
+    "static/js/main.f131ae67.js"
   ]
 }
