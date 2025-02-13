@@ -2,10 +2,8 @@
 import React, { useContext } from 'react';
 import { InventoryContext } from './Inventory';
 import Card from './card';
-
 const InventoryList = () => {
   const inventory = useContext(InventoryContext);
-
   return (
     <div style={styles.container}>
       {inventory.map((item) => (

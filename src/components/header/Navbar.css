@@ -74,7 +74,7 @@
         background-color: white;
         box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
         border-radius: 10px;
-        top: 210px;
+        top: 90px;
         left:425px;
         height:auto;
         width:225px;
@@ -90,7 +90,7 @@
         background-color: white;
         box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
         border-radius: 10px;
-        top: 210px;
+        top: 90px;
         left: 610px;
         width: 250px;
         z-index: 1;
@@ -106,7 +106,7 @@
         background-color: white;
         box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
         border-radius: 10px;
-        top: 210px;
+        top: 90px;
         left: 710px;
         width: 250px;
         z-index: 1;
@@ -122,7 +122,7 @@
         background-color: white;
         box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
         border-radius: 10px;
-        top: 210px;
+        top: 90px;
         left: 975px;
         width: 250px;
         z-index: 1;
@@ -138,7 +138,7 @@
         background-color: white;
         box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
         border-radius: 10px;
-        top: 210px;
+        top: 90px;
         left: 1065px;
         width: 250px;
         z-index: 1;
@@ -155,7 +155,7 @@
         /* color: white !important; */
         box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
         border-radius: 10px;
-        top: 205px;
+        top: 95px;
         left: 0px;
         height:350px;
         width: 100%;
