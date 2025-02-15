@@ -1,0 +1,26 @@
+.rx {
+    display: flex;
+    justify-content: center;
+
+    .crt {
+        position: relative;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background-image: url('./slider-2.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+        height: 350px;
+        width: 98%;
+        h1{
+            position: absolute;
+            height: 200px;
+            width: 35%;
+            top: 60px;
+            left: 60px;
+            font-family: Quicksand,san-sherif;
+            font-weight: 700;
+            color: #152028;
+        }
+    }
+}
