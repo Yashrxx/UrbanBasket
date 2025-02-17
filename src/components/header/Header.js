@@ -35,24 +35,22 @@ export default function Header() {
     'Icecream'
   ])
   // eslint-disable-next-line
-  const countryList=[];
-  useEffect(()=>{
-    const getCountry=async(url)=>{
-      try{
-        await axios.get(url).then((res)=>{
-          if(res!=null){
-            res.data.data.forEach((item)=>{
-              countryList.push(item.country);
-              // console.log(item.country);
-            })
-          }
-        })
-      }catch(error){
-        console.log(error.message);
+  const [countryList, setCountryList] = useState([]);
+
+  useEffect(() => {
+    const getCountry = async (url) => {
+      try {
+        const res = await axios.get(url);
+        if (res?.data?.data) {
+          setCountryList(res.data.data.map((item) => item.country));
+        }
+      } catch (error) {
+        console.error(error.message);
       }
-    }
-    getCountry('https://countriesnow.space/api/v0.1/countries/');
-  },[countryList])// eslint-disable-next-line
+    };
+
+    getCountry("https://countriesnow.space/api/v0.1/countries/");
+  }, []);// eslint-disable-next-line
   return (
     <>
       <header>

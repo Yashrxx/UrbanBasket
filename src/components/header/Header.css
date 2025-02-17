@@ -21,12 +21,11 @@ header{
         .headersearch{
             width:45%;
             height: 65px;
-            /* background-color: red; */
+            z-index: 100;
             display: flex;
             justify-content: center;
             align-items: center;
             .borderbox{
-                /* background-color: coral; */
                 border:2px solid #3bb77e;
                 border-radius: 5px;
                 height: 70%;
@@ -37,7 +36,6 @@ header{
                 align-items: center;
                 .selectdrop{
                     height: 100%;
-                    /* background-color: violet; */
                     padding:5px;
                     cursor:pointer;
                     width: 25%;
@@ -74,11 +72,6 @@ header{
                         right: 10px;
                         cursor: pointer;
                         opacity: 0.7;
-                        /* width: 10%; */
-                        /* background-color: red; */
-                        /* display: flex;
-                        justify-content: center;
-                        align-items: center; */
                     }
                 }
             }
@@ -87,9 +80,8 @@ header{
             width:11%;
             height: 30px;
             margin-left: -60px;
-            background-color: aliceblue;
+            z-index: 100;
             box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
-            /* text-align: center; */
             display: flex;
             flex-direction: row;
             .locationIcon{
@@ -138,7 +130,6 @@ header{
             .lg-3{
                 position: relative;
                 width:25%;
-                /* background-color: orange; */
                 display: flex;
                 flex-direction: row;
                 justify-content: center;

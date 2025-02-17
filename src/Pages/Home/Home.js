@@ -8,6 +8,7 @@ import './Banner/Banner.css'
 import './Home.css'
 import './Products/Product.css'
 import '../About/About.css'
+import Footer from'../../components/footer/footer'
 export default function Home() {
   return (
     <div>
@@ -16,6 +17,7 @@ export default function Home() {
       <Banner/>
       <Product/>
       <About/>
+      <Footer/>
     </div>
   )
 }

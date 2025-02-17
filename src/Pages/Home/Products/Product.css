@@ -158,9 +158,96 @@
     }
 }
 .brics{
-    height: 500px;
-    background-color: #d3eadf;
+    height: 450px;
+    /* background-color: #d3eadf; */
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 30px;
+    .bric-1{
+        width: 24%;
+        height: 400px;
+        margin-left: 3px;
+        background-color: #3BB77E;
+        border-radius: 15px;
+        position: relative;
+        font-family: Quicksand,san-sherif;
+        font-weight: 700;
+        .br-12{
+            position: absolute;
+            height: 190px;
+            width: 90%;
+            border-radius: 15px;
+            top: 200px;
+            left: 20px;
+            background-color: white;
+        }
+        h6{
+            font-size: 15px;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            height: 50px;
+            width: 70%;
+            font-family: Quicksand,san-sherif;
+            font-weight: 700;
+            color:#253D4E;
+            line-height: 1.2;
+            /* border: 2px solid brown; */
+        }
+        .clr{
+            color: #3BB77E;
+            font-weight: 600;
+            position: absolute;
+            top: 100px;
+            left: 40px;
+        }
+        .rating_brc{
+            position: absolute;
+            top: 80px;
+            left: 20px;
+            transform: scale(0.7);
+        }
+        .br-1{
+            height: 100%;
+            width: 100%;
+            background-image: url('./img/banner-5.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 15px;
+        }
+        .br-2{
+            height: 100%;
+            width: 100%;
+            background-image: url('./img/banner-6.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 15px;
+        }
+        .br-3{
+            height: 100%;
+            width: 100%;
+            background-image: url('./img/banner-7.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 15px;
+        }
+        .br-4{
+            height: 100%;
+            width: 100%;
+            background-image: url('./img/banner-8.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 15px;
+        }
+
+    }
 }
 .TopproductSection{
     .r-1{

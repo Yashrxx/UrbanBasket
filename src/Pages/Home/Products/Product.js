@@ -219,7 +219,42 @@ const Product = () => {
       </div>
       <h1>Deals of the Day</h1>
       <div className="brics">
-        <h1>Hello world !!Hello world !!</h1>
+        <div className="bric-1">
+          <div className="br-1">
+            <div className="br-12">
+              <h6>Seeds of Change Organic Quinoa, Brown, & Red Rice</h6>
+              <Rating className='rating_brc' name="half-rating-read" value={2.5} defaultValue={2.5} precision={0.5} readOnly />
+              <p>By <span className='clr'>NestFood</span></p>
+            </div>
+          </div>
+        </div>
+        <div className="bric-1">
+        <div className="br-2">
+            <div className="br-12">
+              <h6>Perdue Simply Smart Organics Gluten Free</h6>
+              <Rating className='rating_brc' name="half-rating-read" value={2.5} defaultValue={2.5} precision={0.5} readOnly />
+              <p>By <span className='clr'>El paso</span></p>
+            </div>
+          </div>
+        </div>
+        <div className="bric-1">
+        <div className="br-3">
+          <div className="br-12">
+              <h6>Signature Wood-Fired Mushroom and Caramelized</h6>
+              <Rating className='rating_brc' name="half-rating-read" value={2.5} defaultValue={2.5} precision={0.5} readOnly />
+              <p>By <span className='clr'>Progresso</span></p>
+            </div>
+          </div>
+        </div>
+        <div className="bric-1">
+        <div className="br-4">
+        <div className="br-12">
+              <h6>Simply Lemonade with Raspberry Juice</h6>
+              <Rating className='rating_brc' name="half-rating-read" value={2.5} defaultValue={2.5} precision={0.5} readOnly />
+              <p>By <span className='clr'>Yoplait</span></p>
+              </div>
+            </div>
+        </div>
       </div>
       <section className="TopproductSection">
         <div className="container-fluid">
