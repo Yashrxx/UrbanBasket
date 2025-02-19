@@ -8,8 +8,6 @@ header{
         margin-top: 20px;
         display: flex;
         flex-direction: row;
-        /* background-color: rgb(224, 156, 156); */
-        /* justify-content: space-evenly; */
         align-items: center;
         .hb-1{
             width:15%;

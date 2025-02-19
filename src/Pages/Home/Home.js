@@ -9,6 +9,7 @@ import './Home.css'
 import './Products/Product.css'
 import '../About/About.css'
 import Footer from'../../components/footer/footer'
+import '../../components/footer/footer.css'
 export default function Home() {
   return (
     <div>

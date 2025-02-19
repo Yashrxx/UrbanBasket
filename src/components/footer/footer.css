@@ -1,0 +1,173 @@
+.container-fluid-x-4{
+    display: flex;
+    flex-direction: row;
+    h3{
+        font-family: Quicksand,san-serif;
+        font-weight: 600;
+        margin-left: 20px;
+        margin: 10px 0px 20px 20px;
+        color: #253D4E;
+    }
+    a{
+        font-size: 15px;
+        margin: 0px 0px 10px 20px;
+        font-family: Quicksand,san-serif;
+        font-weight: 500;
+        color: #253D4E;
+        text-decoration: none;
+    }
+    a:hover{
+        color: #3bb77e;
+        transform: translateX(3px);
+        transition: transform 0.3s ease-in-out,color 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    p{
+        margin-left: 20px;
+    }
+    .cc-1{
+        transform: scale(0.9);margin-right: 5px;margin-top: -4px;color: #3bb77e;
+    }
+    .cc-2{
+        transform: scale(0.9);margin-right: 5px;margin-top: -4px;color: #3bb77e;
+    }
+    .cc-3{
+        transform: scale(0.9);margin-right: 5px;margin-top: -4px;color: #3bb77e;
+    }
+    .cc-4{
+        transform: scale(0.9);margin-right: 5px;margin-top: -4px;color: #3bb77e;
+    } 
+}
+.contact{
+    height: 350px;width: 20%;display: flex;flex-direction:column; justify-content: center;align-items:center;
+    .cont{width: 100%;height: 100%;display: flex;flex-direction: column;justify-content: flex-start;font-family: Quicksand,san-serif;
+    h6{margin:20px 0px 30px 15px;}
+    p{margin-left: 10px !important;color: #253D4E;display: block;}
+}
+    img{width: 70%;height: 70px;margin-right: 60px;}
+}
+.company{
+    height: 350px;width: 20%;display: flex;flex-direction: column;justify-content: flex-start;
+}
+.account{
+    height: 350px;width: 20%;display: flex;flex-direction: column;justify-content: flex-start;
+}
+.corporate{
+    height: 350px;width: 20%;display: flex;flex-direction: column;justify-content: flex-start;
+}
+.popular{
+    height: 350px;width: 20%;display: flex;flex-direction: column;justify-content: flex-start;
+}
+.container-fluid-x-5{
+    h2{
+        margin-left: 10px !important;
+    }
+    p{
+        margin-left: 10px;
+    }
+    .appSt{
+        height: 50px;
+        width: 150px;
+        margin: 0px 10px 10px 10px;
+    }
+    .playSt{
+        height: 50px;
+        width: 150px;
+        margin: 0px 0px 10px 0px;
+    }
+    .paymentGate{
+        margin: 0px 0px 40px 10px;
+        height: 40px;
+        width: 250px;
+    }
+}
+.container-fluid-x-6{
+    display: flex;
+    flex-direction: row;
+.cx-6-1{
+    height: 100px;
+    width: 33%;
+    span{
+        color: #3bb77e;
+    }
+    p{
+        color: grey;
+        font-size: 15px;
+        margin: 10px 0px 0px 30px;
+        width: 70%;
+        font-family: Quicksand,san-serif;
+        font-weight: 500;
+    }
+}
+.cx-6-2{
+    height: 100px;
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .cx-6-2-1{
+        display: flex;
+        flex-direction: row;
+    }
+    h1{
+        font-size: 29px;
+        font-family: Quicksand,san-serif;
+        font-weight: 700;
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 10px;
+        width: 100%;
+        color: #3bb77e;
+    }
+    p{
+        font-size: 14px;
+        font-family: Quicksand,san-serif;
+        color: #253D4E;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .phonecall{
+        margin-top: 20px;
+        margin-right: 10px;
+        height: 35px;
+        width: 35px;
+    }
+}
+.cx-6-3{
+    height: 100px;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h6{
+        font-family: Quicksand,sans-serif;
+        margin: 20px 0px 0px 0px;
+        font-weight: 700;
+        color: #253D4E;
+    }
+    p{
+        font-size: 15px;
+        font-weight: 500;
+        font-family: Quicksand,sans-serif;
+        color: grey;
+    }
+    .cx-6-3-1{
+        display: flex;
+        flex-direction: row;
+    }
+    .imagesBlock{
+        margin: 7px 0px 0px 10px;
+        img{
+            transform: scale(0.8);
+            padding: 7px;
+            background-color: #3bb77e;
+            height: 40px;
+            width: 40px;
+            border-radius: 50px;
+        }
+    }
+}
+}
