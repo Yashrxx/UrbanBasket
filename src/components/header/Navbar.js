@@ -6,6 +6,7 @@ import LocalFireDepartmentOutlinedIcon from '@mui/icons-material/LocalFireDepart
 import HeadsetMicOutlinedIcon from '@mui/icons-material/HeadsetMicOutlined';
 import GridViewIcon from '@mui/icons-material/GridView';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 export default function Navbar() {
   const timer = useRef(null);
   const [drop1, setdrop1] = useState(false);
@@ -57,8 +58,8 @@ export default function Navbar() {
             <nav>
               <ClickAwayListener onClickAway={() => { setdrop1(false); setdrop2(false); setdrop3(false) }}>
                 <ul className='d-flex flex-row justify-content-evenly content'>
-                  <li><LocalFireDepartmentOutlinedIcon style={{ color: "#29A56C", fontWeight: "100" }} />Deals</li>
-                  <li className="home" onClick={() => handleDropdownToggle('drop1')} onMouseEnter={() => { clearTimeout(timer.current); setdrop1(true); handleDropdownToggle('drop1') }} onMouseLeave={handleMouseLeave}>Home<KeyboardArrowDownIcon /></li>
+                  <li><LocalFireDepartmentOutlinedIcon style={{ color: "#29A56C", fontWeight: "100" }} /><Link className='listing' to="/listing">Deals</Link></li>
+                  <li className="home" onClick={() => handleDropdownToggle('drop1')} onMouseEnter={() => { clearTimeout(timer.current); setdrop1(true); handleDropdownToggle('drop1') }} onMouseLeave={handleMouseLeave}><Link to="/urbanBasket" className='homey'>Home<KeyboardArrowDownIcon /></Link></li>
                   {
                     drop1 !== false &&
                     <ul className="drop" onMouseEnter={() => { clearTimeout(timer.current); setdrop1(true); handleDropdownToggle('drop1') }}
@@ -73,7 +74,7 @@ export default function Navbar() {
                   }
                   <li>About</li>
                   <li className='shop' onMouseEnter={() => { clearTimeout(timer.current); setdrop2(true); handleDropdownToggle('drop2') }}
-                    onMouseLeave={handleMouseLeave} >Shop<KeyboardArrowDownIcon /></li>
+                    onMouseLeave={handleMouseLeave} ><Link className='listShop' to='/listing'>Shop<KeyboardArrowDownIcon /></Link></li>
                   {
                     drop2 !== false &&
                     <ul className="shopList" onMouseEnter={() => { clearTimeout(timer.current); setdrop2(true) }} onMouseLeave={handleMouseLeave}>

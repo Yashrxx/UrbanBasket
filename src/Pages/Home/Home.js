@@ -4,6 +4,7 @@ import CatSlider from '../../components/CategorySlider/CatSlider'
 import Banner from './Banner/Banner'
 import Product from './Products/Product'
 import About from '../About/About'
+import Header from '../../components/header/Header'
 import './Banner/Banner.css'
 import './Home.css'
 import './Products/Product.css'
@@ -13,6 +14,7 @@ import '../../components/footer/footer.css'
 export default function Home() {
   return (
     <div>
+      <Header/>
       <HomeSlider/>
       <CatSlider/>
       <Banner/>

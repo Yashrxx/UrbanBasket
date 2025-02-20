@@ -1,0 +1,17 @@
+.loader-container {
+    position: fixed; /* Keep it in the center of the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds a light overlay */
+    z-index: 1000; /* Ensures it's above other elements */
+    img{
+        height: 100px;
+        width: 100px;
+    }
+  }
+  

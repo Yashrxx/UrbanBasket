@@ -140,7 +140,7 @@
     width: 33%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     h6{
         font-family: Quicksand,sans-serif;
@@ -153,10 +153,16 @@
         font-weight: 500;
         font-family: Quicksand,sans-serif;
         color: grey;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 10px;
     }
     .cx-6-3-1{
         display: flex;
         flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 10px;
     }
     .imagesBlock{
         margin: 7px 0px 0px 10px;
