@@ -10,6 +10,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-bottom: 20px;
 
     h1 {
         width: 25%;
@@ -117,8 +118,9 @@
     }
     .Slider_2{
         width: 75%;
-        height: 550px ;
+        height: 475px ;
         position: relative;
+        margin-top: 15px;
         .prev-2{
             position: absolute;
             height: 40px;

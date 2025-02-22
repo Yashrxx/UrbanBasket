@@ -49,10 +49,18 @@
             list-style: none;
             color: grey;
         }
+        .homey.active {
+            color: #29A56C !important; /* Change color for active link */
+            font-weight: bold;
+        }
         .listShop{
             text-decoration: none;
             list-style: none;
             color: grey;          
+        }
+        .listShop.active {
+            color: #29A56C !important; /* Change color for active link */
+            font-weight: 700 !important;
         }
     }
     .part-3{
@@ -120,6 +128,10 @@
             font-size: 15px;
         }
     }
+    .vendor.active{
+        color: #29A56C !important;
+        font-weight: 700;
+    }
     .vendorList{
         position: absolute;
         background-color: white;
@@ -161,11 +173,17 @@
         left: 1065px;
         width: 250px;
         z-index: 1;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
     }
-    li{
+    .linking{
         margin-top: 4px;
         padding: 5px;
-        /* padding-left: 0px; */
+        list-style: none;
+        text-decoration: none;
+        color: rgb(97, 97, 97);
+        font-weight: 600;
         font-size: 15px;
     }
     .crax{

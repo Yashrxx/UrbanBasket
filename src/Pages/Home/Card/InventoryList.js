@@ -2,11 +2,12 @@
 import React, { useContext } from 'react';
 import { InventoryContext } from './Inventory';
 import Card from './card';
-const InventoryList = () => {
+const InventoryList = ({x}) => {
   const inventory = useContext(InventoryContext);
+  const filteredInventory = inventory.filter(item => item.id >= 1 && item.id <= x);
   return (
     <div style={styles.container}>
-      {inventory.map((item) => (
+      {filteredInventory.map((item) => (
         <Card
           key={item.id}
           tag={item.tag}

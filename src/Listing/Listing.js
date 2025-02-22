@@ -3,9 +3,11 @@ import Footer from '../components/footer/footer'
 import About from '../Pages/About/About'
 import Loader from '../components/Loader/Loader'
 import '../components/Loader/Loader.css'
-// import Header from '../components/header/Header'
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import Header from '../components/header/Header'
 import { useState , useEffect} from 'react'
+import {Link} from 'react-router-dom'
 function Listing() {
   const [loading, setLoading] = useState(true); // Manage loading state
   // Simulate loading effect
@@ -21,8 +23,51 @@ function Listing() {
       ) : (
         <>
           <section className='listingItems'>
-              <div className="container">
-                
+              <div className="container-fluid-x">
+                  <div className="Banner_123">
+                    <div className="b-x-1">
+                      <div className="b-x-1-1">
+                      <h2>Snack</h2>
+                      <div className="para">
+                        <div className="emoj">
+                        <p><HomeOutlinedIcon className='homeEmoj'/><Link className='btnhm' to="urbanBasket">Home</Link>
+                        </p>
+                        <p><ArrowForwardIosOutlinedIcon className='arrow'/></p>
+                        <p>Shop</p>
+                        <p><ArrowForwardIosOutlinedIcon className='arrow'/></p>
+                        <p>Snack</p>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <div className="b-x-2">
+                      <div className="Boxes">
+                      <div className="bbx-1">
+                          <a href='/'>Cabbage</a>
+                      </div>
+                      <div className="bbx-1">
+                      <a href='/'>Brocolli</a>
+                      </div>
+                      <div className="bbx-1">
+                      <a href='/'>Artichoke</a>
+                      </div>
+                      <div className="bbx-1">
+                      <a href='/'>Celery</a>
+                      </div>
+                      <div className="bbx-1">
+                      <a href='/'>Spinach</a>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="container-items">
+                    <div className="item">
+
+                    </div>
+                    <div className="cart">
+                      
+                    </div>
+                  </div>
               </div>
           </section>
           <About />

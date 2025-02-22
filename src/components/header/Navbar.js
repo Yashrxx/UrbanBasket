@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import './Navbar.css'
 import { Button, ClickAwayListener } from '@mui/material'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -6,8 +6,16 @@ import LocalFireDepartmentOutlinedIcon from '@mui/icons-material/LocalFireDepart
 import HeadsetMicOutlinedIcon from '@mui/icons-material/HeadsetMicOutlined';
 import GridViewIcon from '@mui/icons-material/GridView';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link ,useLocation , useNavigate} from 'react-router-dom';
 export default function Navbar() {
+  const navigate=useNavigate();
+  const handleLogout=()=>{
+    localStorage.removeItem("token")
+    navigate("/login")
+  }
+  let location=useLocation();
+  useEffect(()=>{
+  },[location])
   const timer = useRef(null);
   const [drop1, setdrop1] = useState(false);
   const [drop2, setdrop2] = useState(false);
@@ -59,7 +67,7 @@ export default function Navbar() {
               <ClickAwayListener onClickAway={() => { setdrop1(false); setdrop2(false); setdrop3(false) }}>
                 <ul className='d-flex flex-row justify-content-evenly content'>
                   <li><LocalFireDepartmentOutlinedIcon style={{ color: "#29A56C", fontWeight: "100" }} /><Link className='listing' to="/listing">Deals</Link></li>
-                  <li className="home" onClick={() => handleDropdownToggle('drop1')} onMouseEnter={() => { clearTimeout(timer.current); setdrop1(true); handleDropdownToggle('drop1') }} onMouseLeave={handleMouseLeave}><Link to="/urbanBasket" className='homey'>Home<KeyboardArrowDownIcon /></Link></li>
+                  <li className="home" onClick={() => handleDropdownToggle('drop1')} onMouseEnter={() => { clearTimeout(timer.current); setdrop1(true); handleDropdownToggle('drop1') }} onMouseLeave={handleMouseLeave}><Link to="/urbanBasket" className={`homey ${location.pathname === "/urbanBasket" ? "active" : ""}`} >Home<KeyboardArrowDownIcon /></Link></li>
                   {
                     drop1 !== false &&
                     <ul className="drop" onMouseEnter={() => { clearTimeout(timer.current); setdrop1(true); handleDropdownToggle('drop1') }}
@@ -74,7 +82,7 @@ export default function Navbar() {
                   }
                   <li>About</li>
                   <li className='shop' onMouseEnter={() => { clearTimeout(timer.current); setdrop2(true); handleDropdownToggle('drop2') }}
-                    onMouseLeave={handleMouseLeave} ><Link className='listShop' to='/listing'>Shop<KeyboardArrowDownIcon /></Link></li>
+                    onMouseLeave={handleMouseLeave} ><Link to='/listing' className={`listShop ${location.pathname === "/listing" ? "active" : ""}`} >Shop<KeyboardArrowDownIcon /></Link></li>
                   {
                     drop2 !== false &&
                     <ul className="shopList" onMouseEnter={() => { clearTimeout(timer.current); setdrop2(true) }} onMouseLeave={handleMouseLeave}>
@@ -92,7 +100,7 @@ export default function Navbar() {
                       <li>Shop invoice</li>
                     </ul>
                   }
-                  <li className='vendor' onMouseEnter={() => { clearTimeout(timer.current); setdrop3(true); handleDropdownToggle('drop3') }}
+                  <li className={`vendor ${location.pathname === "/vendor" ? "active" : ""}`} onMouseEnter={() => { clearTimeout(timer.current); setdrop3(true); handleDropdownToggle('drop3') }}
                     onMouseLeave={handleMouseLeave}>Vendors<KeyboardArrowDownIcon /></li>
                   {
                     drop3 !== false &&
@@ -174,16 +182,16 @@ export default function Navbar() {
                   {
                     drop6 !== false &&
                     <ul className="pageList" onMouseEnter={() => { clearTimeout(timer.current); setdrop6(true) }} onMouseLeave={handleMouseLeave}>
-                      <li>About Us</li>
-                      <li>Contact</li>
-                      <li>My Account</li>
-                      <li>Login</li>
-                      <li>Register</li>
-                      <li>Forgot Password</li>
-                      <li>Reset Password</li>
-                      <li>Privacy Policy</li>
-                      <li>Terms Of Service</li>
-                      <li>404 Page</li>
+                      <Link className='linking' to="/">About Us</Link>
+                      <Link className='linking' to="/">Contact</Link>
+                      <Link className='linking' to="/">My Account</Link>
+                      <Link className='linking' to="/login">Login</Link>
+                      <Link className='linking' to="/signup">Register</Link>
+                      <Link className='linking' to="/" onClick={handleLogout}>Forgot Password</Link>
+                      <Link className='linking' to="/">Reset Password</Link>
+                      <Link className='linking' to="/">Privacy Policy</Link>
+                      <Link className='linking' to="/">Terms Of Service</Link>
+                      <Link className='linking' to="/">404 Page</Link>
                     </ul>
                   }
                   <li>Contact</li>

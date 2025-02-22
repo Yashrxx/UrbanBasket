@@ -69,7 +69,7 @@ const Product = () => {
               <li>Fruits</li>
             </div>
           </div>
-          <InventoryList />
+          <InventoryList x={10}/>
         </div>
       </InventoryProvider>
       <div className="container-fluid-x2">
