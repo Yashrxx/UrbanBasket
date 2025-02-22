@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/UrbanBasket/static/css/main.3a776387.css",
-    "main.js": "/UrbanBasket/static/js/main.b24b5834.js",
+    "main.css": "/UrbanBasket/static/css/main.4f65bb7e.css",
+    "main.js": "/UrbanBasket/static/js/main.8cb761d8.js",
     "static/js/453.2cd00c16.chunk.js": "/UrbanBasket/static/js/453.2cd00c16.chunk.js",
     "static/media/slider-1.png": "/UrbanBasket/static/media/slider-1.89d4c10e6549245f337a.png",
     "static/media/banner-4.png": "/UrbanBasket/static/media/banner-4.9af274418cd53637a3dc.png",
     "static/media/slider-2.png": "/UrbanBasket/static/media/slider-2.01fdcc91eff86c9fabdc.png",
     "static/media/banner-9.png": "/UrbanBasket/static/media/banner-9.c5c89e24d6197901e6ac.png",
+    "static/media/listBanner_2.png": "/UrbanBasket/static/media/listBanner_2.2be0c8b61dd599cb2cf6.png",
     "static/media/banner-5.png": "/UrbanBasket/static/media/banner-5.2b745c4df4b8bb5a3551.png",
     "static/media/product-10-1.jpg": "/UrbanBasket/static/media/product-10-1.f6b6eab6183f640862ac.jpg",
     "static/media/product-5-1.jpg": "/UrbanBasket/static/media/product-5-1.88c0dc57c1fbdb28029e.jpg",
@@ -78,12 +79,12 @@
     "static/media/icon-pinterest-white.svg": "/UrbanBasket/static/media/icon-pinterest-white.35edce3d6eb657273d12c4c00b40e09b.svg",
     "static/media/icon-facebook-white.svg": "/UrbanBasket/static/media/icon-facebook-white.07ec8501c833d7c9b8601895a7df3f36.svg",
     "static/media/icon-youtube-white.svg": "/UrbanBasket/static/media/icon-youtube-white.5200b08093ec0c8a654deaacb9d41866.svg",
-    "main.3a776387.css.map": "/UrbanBasket/static/css/main.3a776387.css.map",
-    "main.b24b5834.js.map": "/UrbanBasket/static/js/main.b24b5834.js.map",
+    "main.4f65bb7e.css.map": "/UrbanBasket/static/css/main.4f65bb7e.css.map",
+    "main.8cb761d8.js.map": "/UrbanBasket/static/js/main.8cb761d8.js.map",
     "453.2cd00c16.chunk.js.map": "/UrbanBasket/static/js/453.2cd00c16.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a776387.css",
-    "static/js/main.b24b5834.js"
+    "static/css/main.4f65bb7e.css",
+    "static/js/main.8cb761d8.js"
   ]
 }
