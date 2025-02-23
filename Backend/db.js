@@ -5,10 +5,7 @@ const connectToMongo=()=>{
     // mongoose.connect(mongoURI,()=>{
     //     console.log("Connected To Mongoose Successfully")
     // })
-    mongoose.connect(mongoURI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      })
+    mongoose.connect(mongoURI)
     .then(() => {
         console.log('Connected to MongoDB');
     })
