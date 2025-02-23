@@ -10,7 +10,7 @@ const Signup = (props) => {
         
         const { name, email, password, cpassword } = Credentials;
 
-        // 🔴 UPDATED: Check if passwords match before making an API request
+        // UPDATED: Check if passwords match before making an API request
         if (password !== cpassword) {
             if (props.showalert) {
                 props.showalert("Passwords do not match", "danger");
@@ -43,7 +43,7 @@ const Signup = (props) => {
                 localStorage.setItem('token', json.authToken);
                 navigate('/');
 
-                // 🔴 UPDATED: Ensure `props.showalert` exists before calling
+                // UPDATED: Ensure `props.showalert` exists before calling
                 if (props.showalert) {
                     props.showalert("Account Created Successfully", "success");
                 }
@@ -66,7 +66,7 @@ const Signup = (props) => {
     return (
         <form onSubmit={handleSubmit}>
             <Col className="container" xs={12} md={6}>
-            <h1 className='text-center'>Sign-up to Notebook</h1>
+            <h1 className='text-center'>Sign-up to urbanBasket</h1>
             <div className="mb-3">
                 <label htmlFor="name" className="form-label">Name</label>
                 <input type="text" className="form-control" name='name' id="name" onChange={onChange} aria-describedby="name" />

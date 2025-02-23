@@ -1,11 +1,14 @@
 const mongoose=require("mongoose");
-const mongoURI="mongodb://localhost:27017/urbanBasket";
+const mongoURI="mongodb+srv://yashrxx:Kapil_jain01@cluster0.wshex.mongodb.net/urbanBasket?retryWrites=true&w=majority&appName=Cluster0";
 const connectToMongo=()=>{
     // console.log("Connected To Mongoose Successfully")
     // mongoose.connect(mongoURI,()=>{
     //     console.log("Connected To Mongoose Successfully")
     // })
-    mongoose.connect(mongoURI)
+    mongoose.connect(mongoURI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      })
     .then(() => {
         console.log('Connected to MongoDB');
     })

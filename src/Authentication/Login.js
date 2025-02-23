@@ -3,7 +3,7 @@ import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { Fragment } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-const Login = (props) => {
+const Login = ({setIsAuthenticated}) => {
     // const{showalert}=props;
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
@@ -23,26 +23,26 @@ const Login = (props) => {
 
             const json = await response.json();
             console.log(json);
-
             if (json.success === true) {
+                setIsAuthenticated(true);
                 //  UPDATED: Save auth token before navigating
                 localStorage.setItem('token', json.authToken);
                 navigate('/urbanBasket');
 
                 //  UPDATED: Check if props.showalert exists before calling
-                if (props.showalert) {
-                    props.showalert("Successfully Logged in", "success");
-                }
+                // if (props.showalert) {
+                //     props.showalert("Successfully Logged in", "success");
+                // }
             } else {
-                if (props.showalert) { //  UPDATED: Added check for undefined function
-                    props.showalert("Invalid Credentials", "danger");
-                }
+                // if (props.showalert) { //  UPDATED: Added check for undefined function
+                //     props.showalert("Invalid Credentials", "danger");
+                // }
             }
         } catch (error) { //  UPDATED: Added error handling
             console.error("Login failed:", error);
-            if (props.showalert) {
-                props.showalert("Something went wrong. Please try again.", "danger");
-            }
+            // if (props.showalert) {
+            //     props.showalert("Something went wrong. Please try again.", "danger");
+            // }
         }
         // console.log("login credentials added successfully")
         // console.log('Login attempted with:', { email, password });
@@ -56,7 +56,7 @@ const Login = (props) => {
                         <Container>
                             <Row style={{ justifyContent: "space-evenly", alignItems: "center", alignContent: "center" }}>
                                 <Col xs={12} md={6}>
-                                    <h1 className="text-center mb-4">Login to Notebook</h1>
+                                    <h1 className="text-center mb-4">Login to urbanBasket</h1>
                                     <Form onSubmit={handleSubmit}>
                                         <Form.Group className="justify-content-md-center  mb-3" controlId="formBasicEmail">
                                             <Form.Label >Email address</Form.Label>
