@@ -13,7 +13,7 @@ const Login = ({setIsAuthenticated}) => {
         //ApI call login
         try {
             // console.log("bale balle")
-            const response = await fetch('http://localhost:5000/api/auth/login', {
+            const response = await fetch('https://urbanbasket-backend.onrender.com/api/auth/createuser', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
