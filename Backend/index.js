@@ -22,7 +22,12 @@ app.use(
     credentials: true,
   })
 );
-
+// app.use(
+//   cors({
+//     origin: "*",  // 🔹 Temporarily allow all origins
+//     credentials: true,
+//   })
+// );
 app.use(express.json());
 
 // ✅ Added route health check

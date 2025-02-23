@@ -2,18 +2,16 @@ import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { Fragment } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-const Login = ({setIsAuthenticated}) => {
-    // const{showalert}=props;
+
+const Login = ({ setIsAuthenticated }) => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        //ApI call login
         try {
-            // console.log("bale balle")
-            const response = await fetch('https://urbanbasket-backend.onrender.com/api/auth/createuser', {
+            const response = await fetch('https://urbanbasket-backend.onrender.com/api/auth/login', { // 🔹 Updated API URL
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
@@ -25,41 +23,28 @@ const Login = ({setIsAuthenticated}) => {
             console.log(json);
             if (json.success === true) {
                 setIsAuthenticated(true);
-                //  UPDATED: Save auth token before navigating
                 localStorage.setItem('token', json.authToken);
                 navigate('/urbanBasket');
-
-                //  UPDATED: Check if props.showalert exists before calling
-                // if (props.showalert) {
-                //     props.showalert("Successfully Logged in", "success");
-                // }
             } else {
-                // if (props.showalert) { //  UPDATED: Added check for undefined function
-                //     props.showalert("Invalid Credentials", "danger");
-                // }
+                console.warn("Invalid Credentials");
             }
-        } catch (error) { //  UPDATED: Added error handling
+        } catch (error) {
             console.error("Login failed:", error);
-            // if (props.showalert) {
-            //     props.showalert("Something went wrong. Please try again.", "danger");
-            // }
         }
-        // console.log("login credentials added successfully")
-        // console.log('Login attempted with:', { email, password });
-        // Here you would typically send a request to your server
     };
+
     return (
         <Fragment>
-            <div id="login" >
+            <div id="login">
                 <div className="container-x">
-                    <section >
+                    <section>
                         <Container>
                             <Row style={{ justifyContent: "space-evenly", alignItems: "center", alignContent: "center" }}>
                                 <Col xs={12} md={6}>
                                     <h1 className="text-center mb-4">Login to urbanBasket</h1>
-                                    <Form onSubmit={handleSubmit}>
+                                    <Form onSubmit={handleSubmit}>  {/* 🔹 Ensure form handles submit */}
                                         <Form.Group className="justify-content-md-center  mb-3" controlId="formBasicEmail">
-                                            <Form.Label >Email address</Form.Label>
+                                            <Form.Label>Email address</Form.Label>
                                             <Form.Control
                                                 type="email"
                                                 placeholder="Enter email"
@@ -76,7 +61,7 @@ const Login = ({setIsAuthenticated}) => {
                                                 onChange={(e) => setPassword(e.target.value)}
                                             />
                                         </Form.Group>
-                                        <Button onSubmit={handleSubmit} className="logx mb-3 w-100" variant="primary" type="submit" >
+                                        <Button className="logx mb-3 w-100" variant="primary" type="submit"> {/* 🔹 Removed onSubmit from Button */}
                                             Submit
                                         </Button>
                                     </Form>
@@ -90,4 +75,4 @@ const Login = ({setIsAuthenticated}) => {
     )
 }
 
-export default Login
+export default Login;
