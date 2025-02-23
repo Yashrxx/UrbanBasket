@@ -5,7 +5,7 @@ const app = express()
 const port = 5000
 var cors=require('cors')
 app.use(cors({
-  origin: 'http://localhost:3000', // Change to your frontend URL
+  origin: 'https://your-github-yashrxx.github.io', // Change to your frontend URL
   methods: 'GET,POST,PUT,DELETE',
   credentials: true
 }));
