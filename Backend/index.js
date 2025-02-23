@@ -4,11 +4,22 @@ const express = require('express')
 const app = express()
 const port = 5000
 var cors=require('cors')
-app.use(cors({
-  origin: 'https://yashrxx.github.io', // Change to your frontend URL
-  methods: 'GET,POST,PUT,DELETE',
-  credentials: true
-}));
+const allowedOrigins = [
+  "http://localhost:3000",   // ✅ Local Development
+  "https://yashrxx.github.io" // ✅ GitHub Pages
+];
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })

@@ -6,7 +6,7 @@ import Listing from '../src/Listing/Listing.js'
 import Login from './Authentication/Login.js'
 import Signup from './Authentication/Signup.js'
 import ProtectedRoute from './ProtectedRoute.js';
-import Navbar from './components/header/Navbar.js'
+import Navbarsm from './components/header/Navbarsm.js'
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 function App() {
@@ -22,8 +22,8 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
+    <Navbarsm/>
       <Routes>
-        <Navbar/>
         <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
         <Route path="/signup" element={<Signup setIsAuthenticated={setIsAuthenticated} />} />
         <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
