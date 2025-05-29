@@ -6,17 +6,18 @@ import LocalFireDepartmentOutlinedIcon from '@mui/icons-material/LocalFireDepart
 import HeadsetMicOutlinedIcon from '@mui/icons-material/HeadsetMicOutlined';
 import GridViewIcon from '@mui/icons-material/GridView';
 import { useState } from 'react';
-import { Link ,useLocation , useNavigate} from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 export default function Navbar() {
-  const navigate=useNavigate();
-  const handleLogout=()=>{
+  const navigate = useNavigate();
+  const handleLogout = () => {
     localStorage.removeItem("token")
     navigate("/login")
   }
-  let location=useLocation();
-  useEffect(()=>{
-  },[location])
+  let location = useLocation();
+  useEffect(() => {
+  }, [location])
   const timer = useRef(null);
+  const [dropx, setdropx] = useState(false);
   const [drop1, setdrop1] = useState(false);
   const [drop2, setdrop2] = useState(false);
   const [drop3, setdrop3] = useState(false);
@@ -25,6 +26,7 @@ export default function Navbar() {
   const [drop6, setdrop6] = useState(false);
   const handleDropdownToggle = (dropdown) => {
     // Close all dropdowns first
+    setdropx(false);
     setdrop1(false);
     setdrop2(false);
     setdrop3(false);
@@ -32,6 +34,7 @@ export default function Navbar() {
     setdrop5(false);
     setdrop6(false);
     // Then open the selected dropdown
+    if (dropdown === 'dropx') setdropx(true);
     if (dropdown === 'drop1') setdrop1(true);
     if (dropdown === 'drop2') setdrop2(true);
     if (dropdown === 'drop3') setdrop3(true);
@@ -47,6 +50,7 @@ export default function Navbar() {
       return;
     }
     timer.current = setTimeout(() => {
+      setdropx(true);
       setdrop2(false);
       setdrop1(false);
       setdrop3(false);
@@ -60,7 +64,29 @@ export default function Navbar() {
       <div className="container-fluid">
         <div className="row">
           <div className="part-1" style={{ width: "18%", marginLeft: "10px" }}>
-            <Button className='text-white catTab'><GridViewIcon />&nbsp; Browse All Categories<KeyboardArrowDownIcon /></Button>
+            <Button onClick={() => handleDropdownToggle('dropx')} onMouseEnter={() => { clearTimeout(timer.current); setdropx(true); handleDropdownToggle('dropx') }} onMouseLeave={handleMouseLeave} className='text-white catTab'><GridViewIcon />&nbsp; Browse All Categories<KeyboardArrowDownIcon /></Button>
+            {/* {
+              dropx !== false &&
+              <span className="top-products" onMouseEnter={() => { clearTimeout(timer.current); setdropx(true); handleDropdownToggle('dropx') }}
+                onMouseLeave={handleMouseLeave}>
+                <div className="top-items">
+                  <div className="hello">
+                    <li className='cube'>Home 1</li>
+                    <li className='cube'>Home 2</li>
+                    <li className='cube'>Home 3</li>
+                    <li className='cube'>Home 4</li>
+                    <li className='cube'>Home 5</li>
+                  </div>
+                  <div className="world">
+                    <li className='cube'>Home 6</li>
+                    <li className='cube'>Home 7</li>
+                    <li className='cube'>Home 8</li>
+                    <li className='cube'>Home 9</li>
+                    <li className='cube'>Home 10</li>
+                  </div>
+                </div>
+              </span>
+            } */}
           </div>
           <div className="part-2" style={{ width: "65%" }}>
             <nav>
@@ -143,13 +169,13 @@ export default function Navbar() {
                       </div>
                       <div className="box-3">
                         <ul className="menu-3">
-                        <h4>Milk and Seafood</h4>
-                        <li>Breakfast and Sausage</li>
-                        <li>Dinner Sausage</li>
-                        <li>Chicken</li>
-                        <li>Sliced Deli Meat</li>
-                        <li>Wild Caught Fllets</li>
-                        <li>Crab and Shellfish</li>
+                          <h4>Milk and Seafood</h4>
+                          <li>Breakfast and Sausage</li>
+                          <li>Dinner Sausage</li>
+                          <li>Chicken</li>
+                          <li>Sliced Deli Meat</li>
+                          <li>Wild Caught Fllets</li>
+                          <li>Crab and Shellfish</li>
                         </ul>
                       </div>
                       <div className="box-4">

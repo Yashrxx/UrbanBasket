@@ -6,11 +6,10 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center !important;
-        align-items: center;
         .Banner_123{
             height: 300px;
             width: 98%;
+            margin: 0px 14px 0px 14px;
             border-radius: 20px;
             background-image: url('./img/listBanner_2.png');
             background-color: antiquewhite;
@@ -101,14 +100,14 @@
             }
         }
     }
-    .container-items{
+    /* .container-items{
         margin-top: 40px;
         height: 1000px;
         width: 98%;
         display: flex;
         flex-direction: row;
         .item{
-            /* background-color: #3BB77E; */
+            background-color: #3BB77E;
             width: 80%;
             border: 2px solid green;
         }
@@ -117,5 +116,10 @@
             border: 2px solid brown;
             width: 20%;
         }
-    }
+    } */
+     .ListingData{
+        .hello{
+            background-color: #3BB77E;
+        }
+     }
 }

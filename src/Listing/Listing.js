@@ -8,6 +8,7 @@ import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutl
 import Header from '../components/header/Header'
 import { useState , useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import Sidebar from '../components/Sidebar/Sidebar'
 function Listing() {
   const [loading, setLoading] = useState(true); // Manage loading state
   // Simulate loading effect
@@ -60,12 +61,22 @@ function Listing() {
                       </div>
                     </div>
                   </div>
-                  <div className="container-items">
+                  {/* <div className="container-items">
                     <div className="item">
 
                     </div>
                     <div className="cart">
                       
+                    </div>
+                  </div> */}
+                  <div className="ListingData">
+                    <div className="row">
+                      <div className="col-md-3">
+                        <Sidebar/>
+                      </div>
+                      <div className="col-md-9">
+
+                      </div>
                     </div>
                   </div>
               </div>
