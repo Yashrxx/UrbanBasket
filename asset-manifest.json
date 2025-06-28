@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/UrbanBasket/static/css/main.8207a124.css",
-    "main.js": "/UrbanBasket/static/js/main.dea44026.js",
+    "main.js": "/UrbanBasket/static/js/main.898c2d20.js",
     "static/js/453.2cd00c16.chunk.js": "/UrbanBasket/static/js/453.2cd00c16.chunk.js",
     "static/media/slider-1.png": "/UrbanBasket/static/media/slider-1.89d4c10e6549245f337a.png",
     "static/media/banner-4.png": "/UrbanBasket/static/media/banner-4.9af274418cd53637a3dc.png",
@@ -76,11 +76,11 @@
     "static/media/icon-facebook-white.svg": "/UrbanBasket/static/media/icon-facebook-white.07ec8501c833d7c9b8601895a7df3f36.svg",
     "static/media/icon-youtube-white.svg": "/UrbanBasket/static/media/icon-youtube-white.5200b08093ec0c8a654deaacb9d41866.svg",
     "main.8207a124.css.map": "/UrbanBasket/static/css/main.8207a124.css.map",
-    "main.dea44026.js.map": "/UrbanBasket/static/js/main.dea44026.js.map",
+    "main.898c2d20.js.map": "/UrbanBasket/static/js/main.898c2d20.js.map",
     "453.2cd00c16.chunk.js.map": "/UrbanBasket/static/js/453.2cd00c16.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8207a124.css",
-    "static/js/main.dea44026.js"
+    "static/js/main.898c2d20.js"
   ]
 }
