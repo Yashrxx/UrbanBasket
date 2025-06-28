@@ -43,7 +43,7 @@ const Signup = (props) => {
 
             if (json.success === true) {
                 localStorage.setItem('token', json.authToken);
-                navigate('/');
+                navigate('/urbanBasket');
 
                 // UPDATED: Ensure `props.showalert` exists before calling
                 if (props.showalert) {
@@ -94,8 +94,8 @@ const Signup = (props) => {
                     <button type="submit" className="btn btn-primary" disabled={loading}>
                         {loading ? "Submitting..." : "Submit"}
                     </button>
-                    {loading ? <h6>This may take a few seconds due to hosting on free services of github</h6> : ""}
                 </div>
+                {loading ? <div style={{ marginTop: '10px' }}><h6 style={{ display: 'flex', justifyContent: "center" }}>This may take a few seconds due to hosting on free services of github</h6></div> : ""}
             </Col>
         </form>
     )
