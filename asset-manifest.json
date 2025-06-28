@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/UrbanBasket/static/css/main.a61a5fd0.css",
-    "main.js": "/UrbanBasket/static/js/main.3acfb4f8.js",
+    "main.css": "/UrbanBasket/static/css/main.8207a124.css",
+    "main.js": "/UrbanBasket/static/js/main.dea44026.js",
     "static/js/453.2cd00c16.chunk.js": "/UrbanBasket/static/js/453.2cd00c16.chunk.js",
     "static/media/slider-1.png": "/UrbanBasket/static/media/slider-1.89d4c10e6549245f337a.png",
     "static/media/banner-4.png": "/UrbanBasket/static/media/banner-4.9af274418cd53637a3dc.png",
@@ -11,6 +11,7 @@
     "static/media/banner-5.png": "/UrbanBasket/static/media/banner-5.2b745c4df4b8bb5a3551.png",
     "static/media/product-10-1.jpg": "/UrbanBasket/static/media/product-10-1.f6b6eab6183f640862ac.jpg",
     "static/media/product-5-1.jpg": "/UrbanBasket/static/media/product-5-1.88c0dc57c1fbdb28029e.jpg",
+    "static/media/Yash.jpg": "/UrbanBasket/static/media/Yash.c1522a89953661829aa6.jpg",
     "static/media/product-3-1.jpg": "/UrbanBasket/static/media/product-3-1.9372354779590c128015.jpg",
     "static/media/product-9-1.jpg": "/UrbanBasket/static/media/product-9-1.f08a5fb13b94b0db4c95.jpg",
     "static/media/product-1-1.jpg": "/UrbanBasket/static/media/product-1-1.b6014f69e378206a53e3.jpg",
@@ -59,11 +60,6 @@
     "static/media/thumbnail-3.jpg": "/UrbanBasket/static/media/thumbnail-3.a8ed4f655bb3677caf97.jpg",
     "static/media/thumbnail-2.jpg": "/UrbanBasket/static/media/thumbnail-2.048915ff1e96bdba4ee4.jpg",
     "static/media/payment-method.png": "/UrbanBasket/static/media/payment-method.47ad3e696f50516da1b3.png",
-    "static/media/icon-2.svg": "/UrbanBasket/static/media/icon-2.761df1b23aee33a865c15aeb20bf3fa4.svg",
-    "static/media/icon-1.svg": "/UrbanBasket/static/media/icon-1.7b2526cc76bf7f7e17b0749c5fdd9e9f.svg",
-    "static/media/icon-4.svg": "/UrbanBasket/static/media/icon-4.358f9215bedf81b8a11ae64168c5e1f1.svg",
-    "static/media/icon-5.svg": "/UrbanBasket/static/media/icon-5.510151d61346c48cf437f7937e635b4d.svg",
-    "static/media/icon-3.svg": "/UrbanBasket/static/media/icon-3.31e495632028f0eb21c7aa07388f92a8.svg",
     "static/media/phone-call.svg": "/UrbanBasket/static/media/phone-call.3a8148f9722bf80cd6d9e5b8ed812aa2.svg",
     "static/media/slick.svg": "/UrbanBasket/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/UrbanBasket/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -79,12 +75,12 @@
     "static/media/icon-pinterest-white.svg": "/UrbanBasket/static/media/icon-pinterest-white.35edce3d6eb657273d12c4c00b40e09b.svg",
     "static/media/icon-facebook-white.svg": "/UrbanBasket/static/media/icon-facebook-white.07ec8501c833d7c9b8601895a7df3f36.svg",
     "static/media/icon-youtube-white.svg": "/UrbanBasket/static/media/icon-youtube-white.5200b08093ec0c8a654deaacb9d41866.svg",
-    "main.a61a5fd0.css.map": "/UrbanBasket/static/css/main.a61a5fd0.css.map",
-    "main.3acfb4f8.js.map": "/UrbanBasket/static/js/main.3acfb4f8.js.map",
+    "main.8207a124.css.map": "/UrbanBasket/static/css/main.8207a124.css.map",
+    "main.dea44026.js.map": "/UrbanBasket/static/js/main.dea44026.js.map",
     "453.2cd00c16.chunk.js.map": "/UrbanBasket/static/js/453.2cd00c16.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a61a5fd0.css",
-    "static/js/main.3acfb4f8.js"
+    "static/css/main.8207a124.css",
+    "static/js/main.dea44026.js"
   ]
 }
