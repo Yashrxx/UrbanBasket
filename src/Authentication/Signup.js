@@ -4,10 +4,12 @@ import { Col } from 'react-bootstrap';
 const Signup = (props) => {
     const navigate = useNavigate();
     const [Credentials, setCredentials] = useState({ name: '', email: '', password: '', cpassword: '' });
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+        setLoading(true);
+
         const { name, email, password, cpassword } = Credentials;
 
         // UPDATED: Check if passwords match before making an API request
@@ -19,7 +21,7 @@ const Signup = (props) => {
         }
 
         try {
-            const response = await fetch('https://urbanbasket-backend.onrender.com/api/auth/createuser' , {
+            const response = await fetch('https://urbanbasket-backend.onrender.com/api/auth/createuser', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -58,6 +60,9 @@ const Signup = (props) => {
                 props.showalert("Something went wrong. Please try again.", "danger");
             }
         }
+        finally {
+            setLoading(false);
+        }
     };
 
     const onChange = (e) => {
@@ -66,26 +71,30 @@ const Signup = (props) => {
     return (
         <form onSubmit={handleSubmit}>
             <Col className="container" xs={12} md={6}>
-            <h1 className='text-center'>Sign-up to urbanBasket</h1>
-            <div className="mb-3">
-                <label htmlFor="name" className="form-label">Name</label>
-                <input type="text" className="form-control" name='name' id="name" onChange={onChange} aria-describedby="name" />
-            </div>
-            <div className="mb-3">
-                <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                <input type="email" className="form-control" name='email' id="email" onChange={onChange} aria-describedby="email" />
-                <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div className="mb-3">
-                <label htmlFor="password" className="form-label">Password</label>
-                <input type="password" className="form-control" name='password' id="password" onChange={onChange} minLength={5} required/>
-                <div id="passwordHelp" className="form-text">We'll never share your password with anyone else.</div>
-            </div>
-            <div className="mb-3">
-                <label htmlFor="cpassword" className="form-label">Confirm Password</label>
-                <input type="password" className="form-control" name='cpassword' id="cpassword" onChange={onChange} minLength={5} required/>
-            </div>
-            <button type="submit" className="btn btn-primary my-1">Submit</button>
+                <h1 className='text-center'>Sign-up to urbanBasket</h1>
+                <div className="mb-3">
+                    <label htmlFor="name" className="form-label">Name</label>
+                    <input type="text" className="form-control" name='name' id="name" onChange={onChange} aria-describedby="name" />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+                    <input type="email" className="form-control" name='email' id="email" onChange={onChange} aria-describedby="email" />
+                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="password" className="form-label">Password</label>
+                    <input type="password" className="form-control" name='password' id="password" onChange={onChange} minLength={5} required />
+                    <div id="passwordHelp" className="form-text">We'll never share your password with anyone else.</div>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="cpassword" className="form-label">Confirm Password</label>
+                    <input type="password" className="form-control" name='cpassword' id="cpassword" onChange={onChange} minLength={5} required />
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <button type="submit" className="btn btn-primary" disabled={loading}>
+                        {loading ? "Submitting..." : "Submit"}
+                    </button>
+                </div>
             </Col>
         </form>
     )

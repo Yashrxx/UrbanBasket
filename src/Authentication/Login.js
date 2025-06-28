@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
-import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import { Form , Container, Row, Col } from 'react-bootstrap';
 import { Fragment } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Login = ({ setIsAuthenticated }) => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
         try {
             const response = await fetch('https://urbanbasket-backend.onrender.com/api/auth/login', { // 🔹 Updated API URL
                 method: 'POST',
@@ -24,12 +29,21 @@ const Login = ({ setIsAuthenticated }) => {
             if (json.success === true) {
                 setIsAuthenticated(true);
                 localStorage.setItem('token', json.authToken);
+                toast.success("Submitted!", {
+                    position: "top-center",
+                    hideProgressBar: true,
+                    pauseOnHover: false,
+                    theme: "colored"
+                });
                 navigate('/urbanBasket');
             } else {
                 console.warn("Invalid Credentials");
+                toast.error("Invalid Credentials. Please try again.");
             }
         } catch (error) {
             console.error("Login failed:", error);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -61,9 +75,11 @@ const Login = ({ setIsAuthenticated }) => {
                                                 onChange={(e) => setPassword(e.target.value)}
                                             />
                                         </Form.Group>
-                                        <Button className="logx mb-3 w-100" variant="primary" type="submit"> {/* 🔹 Removed onSubmit from Button */}
-                                            Submit
-                                        </Button>
+                                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                            <button type="submit" className="btn btn-primary" disabled={loading}>
+                                                {loading ? "Submitting..." : "Submit"}
+                                            </button>
+                                        </div>
                                     </Form>
                                 </Col>
                             </Row>
@@ -71,6 +87,18 @@ const Login = ({ setIsAuthenticated }) => {
                     </section>
                 </div>
             </div>
+        
+            <ToastContainer
+                position="top-center"
+                autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable={false}
+                pauseOnHover={false}
+            />
         </Fragment>
     )
 }

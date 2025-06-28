@@ -17,7 +17,7 @@ export default function Navbar() {
   useEffect(() => {
   }, [location])
   const timer = useRef(null);
-  const [dropx, setdropx] = useState(false);
+  const [setdropx] = useState(false);
   const [drop1, setdrop1] = useState(false);
   const [drop2, setdrop2] = useState(false);
   const [drop3, setdrop3] = useState(false);
