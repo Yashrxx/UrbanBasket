@@ -6,6 +6,7 @@ import Listing from '../src/Listing/Listing.js'
 import Login from './Authentication/Login.js'
 import Signup from './Authentication/Signup.js'
 import ProtectedRoute from './ProtectedRoute.js';
+import About from './Pages/About/About.js';
 import Navbarsm from './components/header/Navbarsm.js'
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
@@ -32,6 +33,7 @@ function App() {
         </Route>
         <Route path="/listing" element={<Listing />} />
         <Route path="*" element={<Navigate to="/urbanBasket" />} />
+        <Route path='/about' element={<About/>}/>
       </Routes>
     </BrowserRouter>
   );

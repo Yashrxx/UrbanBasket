@@ -94,6 +94,7 @@ const Signup = (props) => {
                     <button type="submit" className="btn btn-primary" disabled={loading}>
                         {loading ? "Submitting..." : "Submit"}
                     </button>
+                    {loading ? <h6>This may take a few seconds due to hosting on free services of github</h6> : ""}
                 </div>
             </Col>
         </form>

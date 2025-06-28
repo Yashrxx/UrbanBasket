@@ -1,73 +1,51 @@
-import React from 'react'
-import planeIcon from '../../assets/img/icon-plane.png'
-import icon_1 from './img/icon-1.svg'
-import icon_2 from './img/icon-2.svg'
-import icon_3 from './img/icon-3.svg'
-import icon_4 from './img/icon-4.svg'
-import icon_5 from './img/icon-5.svg'
-function About() {
+import Yash from '../../assets/img/Yash.jpg'
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import { useEffect, useState } from 'react';
+const About = (props) => {
+    const [imgLoaded, setImgLoaded] = useState(false);
+
+    useEffect(() => {
+        const img = new Image();
+        img.src = Yash;
+        img.onload = () => setImgLoaded(true);
+    }, []);
+
+    if (!imgLoaded) {
+        return (
+            <div className='abt' style={{ textAlign: 'center', padding: '2rem' }}>
+                <p style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>Loading...</p>
+            </div>
+        );
+    }
     return (
         <>
-            <div className='rx'>
-                <div className="crt">
-                    <h1>Stay home & get your daily
-                        needs from our shop </h1>
-                    <h6>Start You'r Daily Shopping with <span style={{color: "#3BB77E"}}>Niraag India</span></h6>
-                    <form className="form-subscriber d-flex">
-                                <div className="plane-icon">
-                                    <img src={planeIcon} alt="Error 404" />
-                                </div>
-                                <div className="inputTag">
-                                    <input type="email" placeholder='Your email address' tabIndex="-1" />
-                                </div>
-                                <div className="sub">
-                                    <button className='btn' type='submit' tabIndex={0}>Subscribe</button>
-                                </div>
-                            </form>
+            <div className='abt'>
+                <div className="imgh">
+                    <img className='adz' src={Yash} alt="Error 404" />
                 </div>
-            </div>
-                <div className="abt">
-                    <div className="abt-1">
-                        <div className="ab">
-                            <img src={icon_1} alt="Error 404" />
-                        </div>
-                        <div className="ab-1">
-                        <h4>Best prices & Offers <p>Orders $50 or more</p></h4>
-                        </div>
+                <div className="conth">
+                    <div className="txtmy">
+                        <h2 style={{ fontWeight: "bold" }}>About Me</h2>
+                        <h1 style={{ color: "#D91747", fontWeight: "bold" }}>Web designer</h1>
+                        <p>Hi, I’m a passionate web designer who recently completed my design course and turned my love for building beautiful, functional websites into a profession.
+                            I specialize in creating custom websites that are visually appealing, user-friendly, and tailored to your unique vision. Every project is crafted with creativity, care, and attention to detail—because you deserve a digital presence that reflects both your brand and your personality.</p>
                     </div>
-                    <div className="abt-1">
-                    <div className="ab">
-                            <img src={icon_2} alt="Error 404" />
+                    <div className="contactInfo">
+                        <div className="ci-1">
+                            <p><FiberManualRecordIcon fontSize='small' />  Name : Yash Jain</p>
+                            <p><FiberManualRecordIcon fontSize='small' />  Email : Yashsushillunkad313@gmail.com</p>
+                            <p><FiberManualRecordIcon fontSize='small' />  ph-no : 9789800288</p>
                         </div>
-                        <div className="ab-1">
-                        <h4>Free delivery <p>24/7 amazing services</p></h4>
-                        </div>
-                    </div>
-                    <div className="abt-1">
-                    <div className="ab">
-                            <img src={icon_3} alt="Error 404" />
-                        </div>
-                        <div className="ab-1">
-                        <h4>Great daily deal <p>When you sign up</p></h4>
-                        </div>
-                    </div>
-                    <div className="abt-1">
-                    <div className="ab">
-                            <img src={icon_4} alt="Error 404" />
-                        </div>
-                        <div className="ab-1">
-                        <h4>Wide assortment <p>Mega Discounts</p></h4>
-                        </div>
-                    </div>
-                    <div className="abt-1">
-                    <div className="ab">
-                            <img src={icon_5} alt="Error 404" />
-                        </div>
-                        <div className="ab-1">
-                        <h4>Easy returns <p>Within 30 days</p></h4>
+                        <div className="ci-2">
+                            <div className="ci-12" style={{ display: "flex", flexDirection: "row" }}>
+                                <FiberManualRecordIcon fontSize='small' style={{ marginTop: "4px", marginRight: "4px" }} />
+                                <p> Address - Nattu pilliyar koil st , sowcarpet , chennai</p>
+                            </div>
+                            <p><FiberManualRecordIcon fontSize='small' /> Postal code - 600001</p>
                         </div>
                     </div>
                 </div>
+            </div>
         </>
     )
 }
