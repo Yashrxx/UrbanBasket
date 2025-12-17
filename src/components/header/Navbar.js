@@ -65,28 +65,6 @@ export default function Navbar() {
         <div className="row">
           <div className="part-1" style={{ width: "18%", marginLeft: "10px" }}>
             <Button onClick={() => handleDropdownToggle('dropx')} onMouseEnter={() => { clearTimeout(timer.current); setdropx(true); handleDropdownToggle('dropx') }} onMouseLeave={handleMouseLeave} className='text-white catTab'><GridViewIcon />&nbsp; Browse All Categories<KeyboardArrowDownIcon /></Button>
-            {/* {
-              dropx !== false &&
-              <span className="top-products" onMouseEnter={() => { clearTimeout(timer.current); setdropx(true); handleDropdownToggle('dropx') }}
-                onMouseLeave={handleMouseLeave}>
-                <div className="top-items">
-                  <div className="hello">
-                    <li className='cube'>Home 1</li>
-                    <li className='cube'>Home 2</li>
-                    <li className='cube'>Home 3</li>
-                    <li className='cube'>Home 4</li>
-                    <li className='cube'>Home 5</li>
-                  </div>
-                  <div className="world">
-                    <li className='cube'>Home 6</li>
-                    <li className='cube'>Home 7</li>
-                    <li className='cube'>Home 8</li>
-                    <li className='cube'>Home 9</li>
-                    <li className='cube'>Home 10</li>
-                  </div>
-                </div>
-              </span>
-            } */}
           </div>
           <div className="part-2" style={{ width: "65%" }}>
             <nav>

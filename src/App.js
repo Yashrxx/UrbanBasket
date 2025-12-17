@@ -1,41 +1,32 @@
 import './App.css';
 import Home from './Pages/Home/Home.js';
-import Closer from './Pages/Closer.js'
-import './assets/css/Style.css'
-import Listing from '../src/Listing/Listing.js'
-import Login from './Authentication/Login.js'
-import Signup from './Authentication/Signup.js'
-import ProtectedRoute from './ProtectedRoute.js';
+import Closer from './Pages/Closer.js';
+import './assets/css/Style.css';
+import Listing from './Listing/Listing.js';
 import About from './Pages/About/About.js';
-import Navbarsm from './components/header/Navbarsm.js'
-import { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(
-    !!localStorage.getItem("token") // ✅ Check if token exists
-  );
+import Navbarsm from './components/header/Navbarsm.js';
 
-  useEffect(() => {
-    // ✅ Listen for auth changes (token set/removed)
-    const checkAuth = () => setIsAuthenticated(!!localStorage.getItem("token"));
-    window.addEventListener("storage", checkAuth);
-    return () => window.removeEventListener("storage", checkAuth);
-  }, []);
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+
+function App() {
   return (
     <BrowserRouter>
-    <Navbarsm/>
+      <Navbarsm />
+
       <Routes>
-        <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
-        <Route path="/signup" element={<Signup setIsAuthenticated={setIsAuthenticated} />} />
-        <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
-          <Route path="/" id="vl" element={<Closer />} />
-          <Route path="/UrbanBasket" id="vh" element={<Home />} />
-        </Route>
+        {/* Direct Home Access */}
+        <Route path="/" element={<Home />} />
+
+        {/* Other Pages */}
+        <Route path="/closer" element={<Closer />} />
         <Route path="/listing" element={<Listing />} />
-        <Route path="*" element={<Navigate to="/urbanBasket" />} />
-        <Route path='/about' element={<About/>}/>
+        <Route path="/about" element={<About />} />
+
+        {/* Fallback */}
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   );
 }
+
 export default App;

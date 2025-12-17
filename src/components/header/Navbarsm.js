@@ -30,11 +30,11 @@ const Navbarsm = () => {
           <Link className="nav-link disabled" to="/todo" aria-disabled="true">Disabled</Link>
         </li>
       </ul>
-      {!localStorage.getItem('token')?<form className="d-flex">
+      {/* {!localStorage.getItem('token')?<form className="d-flex">
         <Link className='btn btn-primary mx-3' to='/login' role='button'>Login</Link>
         <Link className='btn btn-primary' to='/signup' role='button'>Sign up</Link>
         </form>
-        :<Link onClick={handleLogout} className='btn btn-primary' to='/login' role='button'>Logout</Link>}
+        :<Link onClick={handleLogout} className='btn btn-primary' to='/login' role='button'>Logout</Link>} */}
     </div>
   </div>
 </nav>
