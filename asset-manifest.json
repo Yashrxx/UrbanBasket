@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/UrbanBasket/static/css/main.e7288e0c.css",
-    "main.js": "/UrbanBasket/static/js/main.e5732e5a.js",
+    "main.js": "/UrbanBasket/static/js/main.3c2bb9fe.js",
     "static/js/453.2cd00c16.chunk.js": "/UrbanBasket/static/js/453.2cd00c16.chunk.js",
     "static/media/slider-1.png": "/UrbanBasket/static/media/slider-1.89d4c10e6549245f337a.png",
     "static/media/banner-4.png": "/UrbanBasket/static/media/banner-4.9af274418cd53637a3dc.png",
@@ -11,7 +11,7 @@
     "static/media/banner-5.png": "/UrbanBasket/static/media/banner-5.2b745c4df4b8bb5a3551.png",
     "static/media/product-10-1.jpg": "/UrbanBasket/static/media/product-10-1.f6b6eab6183f640862ac.jpg",
     "static/media/product-5-1.jpg": "/UrbanBasket/static/media/product-5-1.88c0dc57c1fbdb28029e.jpg",
-    "static/media/Yash.jpg": "/UrbanBasket/static/media/Yash.c1522a89953661829aa6.jpg",
+    "static/media/yash-x2.jpeg": "/UrbanBasket/static/media/yash-x2.9bc2f22f0d74ccff2d46.jpeg",
     "static/media/product-3-1.jpg": "/UrbanBasket/static/media/product-3-1.9372354779590c128015.jpg",
     "static/media/product-9-1.jpg": "/UrbanBasket/static/media/product-9-1.f08a5fb13b94b0db4c95.jpg",
     "static/media/product-1-1.jpg": "/UrbanBasket/static/media/product-1-1.b6014f69e378206a53e3.jpg",
@@ -76,11 +76,11 @@
     "static/media/icon-facebook-white.svg": "/UrbanBasket/static/media/icon-facebook-white.07ec8501c833d7c9b8601895a7df3f36.svg",
     "static/media/icon-youtube-white.svg": "/UrbanBasket/static/media/icon-youtube-white.5200b08093ec0c8a654deaacb9d41866.svg",
     "main.e7288e0c.css.map": "/UrbanBasket/static/css/main.e7288e0c.css.map",
-    "main.e5732e5a.js.map": "/UrbanBasket/static/js/main.e5732e5a.js.map",
+    "main.3c2bb9fe.js.map": "/UrbanBasket/static/js/main.3c2bb9fe.js.map",
     "453.2cd00c16.chunk.js.map": "/UrbanBasket/static/js/453.2cd00c16.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e7288e0c.css",
-    "static/js/main.e5732e5a.js"
+    "static/js/main.3c2bb9fe.js"
   ]
 }
