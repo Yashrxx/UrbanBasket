@@ -1,4 +1,4 @@
-import Yash from '../../assets/img/Yash.jpg'
+import Yash from '../../assets/img/yash-x2.jpeg';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import { useEffect, useState } from 'react';
 const About = (props) => {
